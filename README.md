@@ -162,4 +162,4 @@ MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-Made with ❤️ by the Guru UI team. Built for developers who value performance, simplicity, and flexibility.
+Made with ❤️ by Arnis. Built for developers who value performance, simplicity, and flexibility.

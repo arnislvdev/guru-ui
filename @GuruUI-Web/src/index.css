@@ -1,0 +1,49 @@
+@import '@arnis-lv/guru-ui/style.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Code block styling */
+pre[class*="language-"] {
+  @apply rounded-lg !bg-slate-900 !text-slate-100 p-4 overflow-x-auto;
+}
+
+code[class*="language-"] {
+  @apply !bg-transparent !text-slate-100;
+}
+
+/* Inline code */
+:not(pre) > code {
+  @apply bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+/* Dark theme inline code */
+.dark :not(pre) > code {
+  @apply bg-slate-800 text-slate-200;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
