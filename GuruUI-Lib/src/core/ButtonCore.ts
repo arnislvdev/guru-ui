@@ -1,63 +1,54 @@
+import { ComponentSize, ComponentVariant, CSS_VARS } from '../types/common'
+import { BaseCore, createComponentClasses } from './base'
+
 export interface ButtonCoreOptions {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger'
-  size?: 'sm' | 'md' | 'lg' | 'xl'
+  variant?: ComponentVariant
+  size?: ComponentSize
   disabled?: boolean
   loading?: boolean
-  type?: 'button' | 'submit' | 'reset'
+  iconOnly?: boolean
   fullWidth?: boolean
-  rounded?: boolean
 }
 
-export class ButtonCore {
+export class ButtonCore extends BaseCore {
   static getClasses(options: ButtonCoreOptions): string {
     const baseClasses = [
-      'inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed',
+      'inline-flex items-center justify-center font-medium',
+      `rounded-[color:var(${CSS_VARS.radius})]`,
       options.fullWidth ? 'w-full' : '',
-      options.rounded ? 'rounded-full' : 'rounded-lg'
-    ]
+      options.iconOnly ? 'aspect-square p-0' : ''
+    ].filter(Boolean).join(' ')
 
-    // Size classes
-    const sizeClasses = {
+    // Size classes - different for text vs icon buttons
+    const sizeClasses = options.iconOnly ? {
+      sm: 'w-8 h-8 text-sm',
+      md: 'w-9 h-9 text-sm', 
+      lg: 'w-10 h-10 text-base',
+      xl: 'w-12 h-12 text-lg'
+    } : {
       sm: 'px-3 py-1.5 text-sm',
       md: 'px-4 py-2 text-sm',
       lg: 'px-6 py-3 text-base',
       xl: 'px-8 py-4 text-lg'
     }
 
-    // Variant classes
+    // Variant classes using consistent CSS variables
     const variantClasses = {
-      primary: 'bg-[color:var(--guru-accent,#ffffff)] text-[color:var(--guru-onAccent,#0b0b0b)] hover:bg-[color:var(--guru-accentHover,#e5e5e5)] focus:ring-[color:var(--guru-accent,#ffffff)]',
-      secondary: 'bg-[color:var(--guru-body,#b3b3b3)]/10 text-[color:var(--guru-body,#b3b3b3)] hover:bg-[color:var(--guru-body,#b3b3b3)]/20 focus:ring-[color:var(--guru-body,#b3b3b3)]',
-      outline: 'border border-[color:var(--guru-accent,#ffffff)]/20 text-[color:var(--guru-accent,#ffffff)] hover:bg-[color:var(--guru-accent,#ffffff)]/10 focus:ring-[color:var(--guru-accent,#ffffff)]',
-      ghost: 'text-[color:var(--guru-body,#b3b3b3)] hover:bg-[color:var(--guru-body,#b3b3b3)]/10 focus:ring-[color:var(--guru-body,#b3b3b3)]',
-      danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-600'
+      primary: `bg-[color:var(${CSS_VARS.accent})] text-[color:var(${CSS_VARS.onAccent})] hover:bg-[color:var(${CSS_VARS.accentHover})]`,
+      secondary: `bg-[color:var(${CSS_VARS.body})]/10 text-[color:var(${CSS_VARS.body})] hover:bg-[color:var(${CSS_VARS.body})]/20`,
+      outline: `border border-[color:var(${CSS_VARS.accent})]/20 text-[color:var(${CSS_VARS.accent})] hover:bg-[color:var(${CSS_VARS.accent})]/10`,
+      ghost: `text-[color:var(${CSS_VARS.body})] hover:bg-[color:var(${CSS_VARS.body})]/10`,
+      danger: 'bg-red-600 text-white hover:bg-red-700'
     }
 
-    return [
-      ...baseClasses,
-      sizeClasses[options.size || 'md'],
-      variantClasses[options.variant || 'primary']
-    ].join(' ')
+    return createComponentClasses(baseClasses, sizeClasses, variantClasses, options)
   }
 
   static getAccessibilityProps(options: ButtonCoreOptions) {
     return {
-      disabled: options.disabled || options.loading,
-      type: options.type || 'button',
-      'aria-disabled': options.disabled || options.loading,
-      'aria-busy': options.loading
-    }
-  }
-
-  static getDefaultOptions(): ButtonCoreOptions {
-    return {
-      variant: 'primary',
-      size: 'md',
-      disabled: false,
-      loading: false,
+      ...this.getBaseAccessibilityProps(options.disabled || options.loading),
       type: 'button',
-      fullWidth: false,
-      rounded: false
+      'aria-busy': options.loading || false
     }
   }
 }

@@ -1,7 +1,9 @@
 import * as React from 'react'
+import { CSS_VARS } from '../types/common'
 
-export type Theme = {
+export interface Theme {
   background?: string
+  foreground?: string
   heading?: string
   body?: string
   accent?: string
@@ -11,46 +13,96 @@ export type Theme = {
   fontFamily?: string
 }
 
-export type ThemeProviderProps = {
-  theme?: Theme
+export interface ThemeProviderProps {
+  theme?: Partial<Theme>
   children: React.ReactNode
+  /**
+   * Apply theme to root document instead of wrapper div
+   * Useful for global theming
+   */
+  global?: boolean
 }
 
-const defaultTheme: Required<Omit<Theme, 'fontFamily'>> & { fontFamily: string } = {
-  background: '#121212',
+const defaultTheme: Required<Theme> = {
+  background: '#0a0a0a',
+  foreground: '#fafafa',
   heading: '#ffffff',
-  body: '#b3b3b3',
+  body: '#a3a3a3',
   accent: '#ffffff',
   accentHover: '#e5e5e5',
-  onAccent: '#0b0b0b',
+  onAccent: '#0a0a0a',
   radius: '0.5rem',
-  fontFamily: 'Inter, ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif'
+  fontFamily: 'Inter, ui-sans-serif, system-ui, sans-serif'
 }
 
-export const ThemeContext = React.createContext<Theme>(defaultTheme)
+const ThemeContext = React.createContext<Required<Theme>>(defaultTheme)
 
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ theme, children }) => {
-  const merged = { ...defaultTheme, ...theme }
-  const style: React.CSSProperties = {
-    // Expose as CSS variables for Tailwind interop and runtime theming
-    ['--guru-background' as any]: merged.background,
-    ['--guru-heading' as any]: merged.heading,
-    ['--guru-body' as any]: merged.body,
-    ['--guru-accent' as any]: merged.accent,
-    ['--guru-accent-hover' as any]: merged.accentHover,
-    ['--guru-on-accent' as any]: merged.onAccent,
-    ['--guru-radius' as any]: merged.radius,
-    ['--guru-font' as any]: merged.fontFamily
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({ 
+  theme, 
+  children, 
+  global = false 
+}) => {
+  const merged = React.useMemo(() => ({ 
+    ...defaultTheme, 
+    ...theme 
+  }), [theme])
+
+  const cssVariables = React.useMemo(() => ({
+    [CSS_VARS.background]: merged.background,
+    [CSS_VARS.foreground]: merged.foreground,
+    [CSS_VARS.heading]: merged.heading,
+    [CSS_VARS.body]: merged.body,
+    [CSS_VARS.accent]: merged.accent,
+    [CSS_VARS.accentHover]: merged.accentHover,
+    [CSS_VARS.onAccent]: merged.onAccent,
+    [CSS_VARS.radius]: merged.radius,
+    [CSS_VARS.font]: merged.fontFamily,
+  }), [merged])
+
+  // Apply theme globally to document root
+  React.useEffect(() => {
+    if (!global || typeof document === 'undefined') return
+
+    Object.entries(cssVariables).forEach(([key, value]) => {
+      document.documentElement.style.setProperty(key, value)
+    })
+
+    return () => {
+      Object.keys(cssVariables).forEach(key => {
+        document.documentElement.style.removeProperty(key)
+      })
+    }
+  }, [cssVariables, global])
+
+  if (global) {
+    return (
+      <ThemeContext.Provider value={merged}>
+        {children}
+      </ThemeContext.Provider>
+    )
   }
+
   return (
     <ThemeContext.Provider value={merged}>
-      <div style={style} className="guru-ui-theme">
+      <div 
+        style={cssVariables as React.CSSProperties} 
+        className="guru-ui-theme"
+      >
         {children}
       </div>
     </ThemeContext.Provider>
   )
 }
 
-export const useTheme = () => React.useContext(ThemeContext)
+/**
+ * Hook to access the current theme values
+ */
+export const useTheme = (): Required<Theme> => {
+  const context = React.useContext(ThemeContext)
+  if (!context) {
+    throw new Error('useTheme must be used within a ThemeProvider')
+  }
+  return context
+}
 
 
