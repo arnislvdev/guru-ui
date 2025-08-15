@@ -13,7 +13,6 @@ export default defineConfig({
     }),
     vue({
       // Optimize Vue for production builds
-      reactivityTransform: true
     }),
     dts({
       insertTypesEntry: true,
@@ -42,7 +41,8 @@ export default defineConfig({
         'react/jsx-runtime',
         'vue',
         'clsx',
-        'tailwind-merge'
+        'tailwind-merge',
+        'lucide-react'
       ],
       output: {
         preserveModules: true,

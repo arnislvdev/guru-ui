@@ -1,4 +1,4 @@
-import { ComponentSize, ComponentVariant } from '../types/common'
+import type { ComponentSize, ComponentVariant } from '../types/common'
 import { BaseCore, createComponentClasses } from './base'
 
 export interface TextareaCoreOptions {
@@ -72,7 +72,7 @@ export class TextareaCore extends BaseCore {
       placeholder: options.placeholder,
       rows: options.rows,
       cols: options.cols,
-      'aria-invalid': options.error || options.variant === 'error',
+      'aria-invalid': options.error || options.variant === 'danger',
       'aria-describedby': options.error ? 'textarea-error' : undefined
     }
   }
@@ -80,7 +80,7 @@ export class TextareaCore extends BaseCore {
   static getDefaultOptions(): TextareaCoreOptions {
     return {
       size: 'md',
-      variant: 'default',
+      variant: 'primary',
       disabled: false,
       required: false,
       placeholder: '',
