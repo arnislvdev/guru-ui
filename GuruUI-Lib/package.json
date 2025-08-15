@@ -1,0 +1,104 @@
+{
+  "name": "arnis-ux",
+  "version": "0.1.21",
+  "description": "A lightweight, multi-framework UI component library with React, Vue, and vanilla JavaScript support",
+  "license": "MIT",
+  "author": "ArnisUX",
+  "homepage": "https://www.npmjs.com/package/arnis-ux",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnis-lv/arnis-ux.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arnis-lv/arnis-ux/issues"
+  },
+  "type": "module",
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "tailwind-preset.js",
+    "style.css",
+    "animations.css",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./vue": {
+      "types": "./dist/vue.d.ts",
+      "import": "./dist/vue.js"
+    },
+    "./vanilla": {
+      "types": "./dist/vanilla.d.ts",
+      "import": "./dist/vanilla.js"
+    },
+    "./core": {
+      "types": "./dist/core.d.ts",
+      "import": "./dist/core.js"
+    },
+    "./tailwind-preset": "./tailwind-preset.js",
+    "./style.css": "./style.css",
+    "./animations.css": "./animations.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "rimraf dist && vite build && npm run postbuild",
+    "postbuild": "node -e \"try{require('fs').copyFileSync('dist/style.css','style.css')}catch(e){}; try{require('fs').copyFileSync('dist/animations.css','animations.css')}catch(e){}\"",
+    "preview": "vite preview",
+    "release": "npm run build && npm publish --access public",
+    "size": "npm run build && node -e \"(async()=>{const fs=require('fs');const z=require('zlib');const p='dist/index.js';const b=fs.readFileSync(p);console.log('ESM size:',(b.length/1024).toFixed(1),'KB');console.log('Gzip:',(z.gzipSync(b).length/1024).toFixed(1),'KB')})()\"",
+    "analyze": "npm run build && npx vite-bundle-analyzer dist",
+    "docs:dev": "vite --config docs/vite.config.ts --root docs",
+    "docs:build": "vite build --config docs/vite.config.ts --root docs",
+    "docs:preview": "vite preview --config docs/vite.config.ts --root docs"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "vue": ">=3.3",
+    "tailwindcss": ">=3.4",
+    "typescript": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vue": "^3.4.0",
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2",
+    "vite-plugin-dts": "^4.0.0",
+    "cssnano": "^7.0.0"
+  },
+  "keywords": [
+    "react",
+    "vue",
+    "svelte",
+    "tailwind",
+    "ui",
+    "components",
+    "library",
+    "dark",
+    "vite",
+    "multi-framework",
+    "typescript",
+    "accessible",
+    "lightweight"
+  ]
+}
