@@ -1,10 +1,10 @@
 {
-  "name": "guru-ui",
+  "name": "@arnis-lv/guru-ui",
   "version": "0.1.21",
   "description": "A lightweight, multi-framework UI component library with React, Vue, and vanilla JavaScript support",
   "license": "MIT",
   "author": "GuruUI",
-  "homepage": "https://www.npmjs.com/package/guru-ui",
+  "homepage": "https://guruui.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/guru-lv/guru-ui.git"

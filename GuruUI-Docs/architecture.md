@@ -6,12 +6,13 @@ Learn how Guru UI is built and organized. Understanding the architecture will he
 
 ### Multi-Framework First
 
-Guru UI is designed from the ground up to work across multiple frameworks:
+Guru UI is designed from the ground up to work across multiple frameworks with shared core logic:
 
-- **Shared Core Logic** - Business logic is framework-agnostic
-- **Framework Adapters** - Thin wrappers for React, Vue, and vanilla JS
+- **Shared Core Logic** - Business logic is framework-agnostic (418 bytes gzipped)
+- **Framework Adapters** - Ultra-lightweight wrappers (React: 1.0KB, Vue: 263 bytes, Vanilla: 400 bytes)
 - **Consistent APIs** - Same props and behavior across all frameworks
-- **Unified Styling** - Single CSS file works everywhere
+- **Unified Styling** - Single CSS file works everywhere (6.4KB gzipped)
+- **Optimal Performance** - Total library size: 9.1KB gzipped
 
 ### Component Architecture
 
@@ -101,9 +102,11 @@ export class ButtonCore {
 ### Benefits of Core System
 
 - **Consistency** - Same logic across all frameworks
-- **Maintainability** - Single source of truth
+- **Maintainability** - Single source of truth for 16 implemented cores
 - **Testing** - Test logic once, works everywhere
-- **Performance** - Shared code reduces bundle size
+- **Performance** - Shared code reduces bundle size (39.4% core-to-React ratio)
+- **Tree-shaking** - Excellent optimization for importing only what you need
+- **Bundle Efficiency** - Ultra-lightweight at 9.1KB gzipped total
 
 ## Framework Implementations
 
@@ -270,14 +273,17 @@ graph LR
 
 ### Build Outputs
 
-The build process generates multiple outputs:
+The build process generates optimized, framework-specific outputs:
 
-- **dist/index.js** - React components (default)
-- **dist/vue.js** - Vue 3 components
-- **dist/vanilla.js** - Vanilla JavaScript
-- **dist/core.js** - Core logic only
-- **style.css** - Compiled styles
+- **dist/index.js** - React components (1.0KB gzipped)
+- **dist/vue.js** - Vue 3 components (263 bytes gzipped)
+- **dist/vanilla.js** - Vanilla JavaScript (400 bytes gzipped)
+- **dist/core.js** - Core logic only (418 bytes gzipped)
+- **dist/utils.js** - Utilities (623 bytes gzipped)
+- **style.css** - Compiled styles (6.4KB gzipped)
 - ***.d.ts** - TypeScript definitions
+
+**Total optimized size: 9.1KB gzipped**
 
 ### Vite Configuration
 

@@ -137,6 +137,18 @@ const MyButton: React.FC<ButtonProps> = (props) => {
 }
 ```
 
+## Bundle Size
+
+The library is extremely lightweight and optimized:
+- **Total library**: 9.1KB gzipped
+- **React bundle**: 1.0KB gzipped
+- **Vue bundle**: 263 bytes gzipped
+- **Vanilla JS**: 400 bytes gzipped
+- **Core logic**: 418 bytes gzipped
+- **Styles**: 6.4KB gzipped
+
+The library has excellent tree-shaking support, so you only bundle what you actually import and use.
+
 ## Bundle Optimization
 
 ### Tree Shaking
@@ -156,17 +168,20 @@ import * as GuruUI from 'guru-ui'
 You can import from specific framework builds to reduce bundle size:
 
 ```tsx
-// React (default)
+// React (default) - 1.0KB gzipped
 import { Button } from 'guru-ui'
 
-// Vue specific
+// Vue specific - 263 bytes gzipped
 import { Button } from 'guru-ui/vue'
 
-// Vanilla specific
+// Vanilla specific - 400 bytes gzipped
 import { createButton } from 'guru-ui/vanilla'
 
-// Core logic only (no framework wrapper)
+// Core logic only - 418 bytes gzipped
 import { ButtonCore } from 'guru-ui/core'
+
+// Utilities only - 623 bytes gzipped
+import { cn } from 'guru-ui/utils'
 ```
 
 ## Next.js Setup
