@@ -88,7 +88,7 @@ export const Modal: React.FC<ModalProps> = ({
       <div ref={containerRef} className={ModalCore.getContentClasses(modalOptions)}>
         {title && (
           <div className={ModalCore.getHeaderClasses()}>
-            <h2 className="text-lg font-semibold text-[color:var(--arnis-heading,#ffffff)]" id="arnis-ux-modal-title">
+            <h2 className="text-lg font-semibold text-[color:var(--guru-heading,#ffffff)]" id="guru-ui-modal-title">
               {title}
             </h2>
             {showCloseButton && (
@@ -105,7 +105,7 @@ export const Modal: React.FC<ModalProps> = ({
         <div className={ModalCore.getBodyClasses()}>{children}</div>
         <div className={ModalCore.getFooterClasses()}>
           <button
-            className="inline-flex items-center justify-center rounded-[var(--arnis-radius,0.5rem)] bg-[color:var(--arnis-accent,#ffffff)] px-4 py-2 text-sm font-medium text-[color:var(--arnis-on-accent,#0b0b0b)] hover:bg-[color:var(--arnis-accent-hover,#e5e5e5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--arnis-accent,#ffffff)]/60 focus-visible:ring-offset-2 ring-offset-[color:var(--arnis-background,#121212)]"
+            className="inline-flex items-center justify-center rounded-[var(--guru-radius,0.5rem)] bg-[color:var(--guru-accent,#ffffff)] px-4 py-2 text-sm font-medium text-[color:var(--guru-on-accent,#0b0b0b)] hover:bg-[color:var(--guru-accent-hover,#e5e5e5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--guru-accent,#ffffff)]/60 focus-visible:ring-offset-2 ring-offset-[color:var(--guru-background,#121212)]"
             onClick={onClose}
           >
             Close

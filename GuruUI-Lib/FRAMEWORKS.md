@@ -1,18 +1,18 @@
-# 🚀 ArnisUX Multi-Framework Support
+# 🚀 GuruUI Multi-Framework Support
 
-ArnisUX now supports multiple frameworks! Choose the approach that best fits your project.
+GuruUI now supports multiple frameworks! Choose the approach that best fits your project.
 
 ## 📦 Installation
 
 ```bash
-npm install arnis-ux
+npm install guru-ui
 ```
 
 ## 🎯 Framework Options
 
 ### 1. **React (Primary)**
 ```tsx
-import { Button, Card, Input } from 'arnis-ux'
+import { Button, Card, Input } from 'guru-ui'
 
 function App() {
   return (
@@ -32,17 +32,17 @@ function App() {
 ```vue
 <template>
   <div>
-    <ArnisButton variant="primary" size="lg" @click="handleClick">
+    <GuruButton variant="primary" size="lg" @click="handleClick">
       Click me
-    </ArnisButton>
-    <ArnisCard>
-      <ArnisInput placeholder="Enter text..." />
-    </ArnisCard>
+    </GuruButton>
+    <GuruCard>
+      <GuruInput placeholder="Enter text..." />
+    </GuruCard>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ArnisButton, ArnisCard, ArnisInput } from 'arnis-ux/vue'
+import { GuruButton, GuruCard, GuruInput } from 'guru-ui/vue'
 
 const handleClick = () => {
   console.log('Button clicked!')
@@ -53,16 +53,16 @@ const handleClick = () => {
 ### 3. **Vanilla JavaScript**
 ```html
 <!-- HTML with data attributes -->
-<button data-arnis-button data-variant="primary" data-size="lg" data-text="Click me"></button>
+<button data-guru-button data-variant="primary" data-size="lg" data-text="Click me"></button>
 
-<div data-arnis-card>
-  <input data-arnis-input placeholder="Enter text..." />
+<div data-guru-card>
+  <input data-guru-input placeholder="Enter text..." />
 </div>
 ```
 
 ```javascript
 // JavaScript API
-import { createButton, ArnisCard } from 'arnis-ux/vanilla'
+import { createButton, GuruCard } from 'guru-ui/vanilla'
 
 // Programmatic creation
 const button = createButton({
@@ -75,7 +75,7 @@ const button = createButton({
 button.mount(document.getElementById('container'))
 
 // Event handling
-document.addEventListener('arnis-button-click', (e) => {
+document.addEventListener('guru-button-click', (e) => {
   console.log('Button clicked via event!', e.detail)
 })
 ```
@@ -86,13 +86,13 @@ All frameworks use the same CSS:
 
 ```javascript
 // React
-import 'arnis-ux/style.css'
+import 'guru-ui/style.css'
 
 // Vue
-import 'arnis-ux/style.css'
+import 'guru-ui/style.css'
 
 // Vanilla
-import 'arnis-ux/style.css'
+import 'guru-ui/style.css'
 ```
 
 ## 🔧 Tailwind Preset
@@ -100,7 +100,7 @@ import 'arnis-ux/style.css'
 ```javascript
 // tailwind.config.js
 module.exports = {
-  presets: [require('arnis-ux/tailwind-preset')],
+  presets: [require('guru-ui/tailwind-preset')],
   // ... your config
 }
 ```
@@ -140,12 +140,12 @@ module.exports = {
 
 ### **React + Next.js**
 ```bash
-npm install arnis-ux
+npm install guru-ui
 ```
 
 ```tsx
 // pages/_app.tsx
-import 'arnis-ux/style.css'
+import 'guru-ui/style.css'
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />
@@ -154,25 +154,25 @@ export default function App({ Component, pageProps }) {
 
 ### **Vue + Nuxt**
 ```bash
-npm install arnis-ux
+npm install guru-ui
 ```
 
 ```vue
 <!-- nuxt.config.ts -->
 export default {
-  css: ['arnis-ux/style.css']
+  css: ['guru-ui/style.css']
 }
 ```
 
 ### **Vanilla + Vite**
 ```bash
-npm install arnis-ux
+npm install guru-ui
 ```
 
 ```javascript
 // main.js
-import 'arnis-ux/style.css'
-import 'arnis-ux/vanilla'
+import 'guru-ui/style.css'
+import 'guru-ui/vanilla'
 ```
 
 ## 🔄 Migration Guide
@@ -185,7 +185,7 @@ import 'arnis-ux/vanilla'
 
 ```vue
 <!-- Vue -->
-<ArnisButton variant="primary">Click me</ArnisButton>
+<GuruButton variant="primary">Click me</GuruButton>
 ```
 
 ### **From React to Vanilla**
@@ -196,7 +196,7 @@ import 'arnis-ux/vanilla'
 
 ```html
 <!-- Vanilla -->
-<button data-arnis-button data-variant="primary" data-text="Click me"></button>
+<button data-guru-button data-variant="primary" data-text="Click me"></button>
 ```
 
 ## 🎨 Theming
@@ -205,7 +205,7 @@ All frameworks support the same theming system:
 
 ```javascript
 // Any framework
-import { ThemeProvider, themes } from 'arnis-ux'
+import { ThemeProvider, themes } from 'guru-ui'
 
 // Use the same theme presets across all frameworks
 const customTheme = {

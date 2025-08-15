@@ -29,7 +29,7 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
       aria-live="assertive"
       aria-modal="true"
     >
-      <div className="rounded-lg bg-[color:var(--arnis-background,#121212)]/90 px-6 py-5 shadow-xl border border-white/10">
+      <div className="rounded-lg bg-[color:var(--guru-background,#121212)]/90 px-6 py-5 shadow-xl border border-white/10">
         <Loader size={size} label={label} />
       </div>
     </div>

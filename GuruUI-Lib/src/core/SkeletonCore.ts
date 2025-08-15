@@ -9,7 +9,7 @@ export interface SkeletonCoreOptions {
 export class SkeletonCore {
   static getClasses(options: SkeletonCoreOptions): string {
     const baseClasses = [
-      'bg-[color:var(--arnis-body,#b3b3b3)]/10 rounded'
+      'bg-[color:var(--guru-body,#b3b3b3)]/10 rounded'
     ]
 
     // Variant classes
@@ -43,7 +43,7 @@ export class SkeletonCore {
 
   static getTextClasses(options: SkeletonCoreOptions): string {
     const baseClasses = [
-      'bg-[color:var(--arnis-body,#b3b3b3)]/10 rounded animate-pulse'
+      'bg-[color:var(--guru-body,#b3b3b3)]/10 rounded animate-pulse'
     ]
 
     const sizeClasses = {
@@ -60,7 +60,7 @@ export class SkeletonCore {
 
   static getCircularClasses(options: SkeletonCoreOptions): string {
     const baseClasses = [
-      'bg-[color:var(--arnis-body,#b3b3b3)]/10 rounded-full animate-pulse'
+      'bg-[color:var(--guru-body,#b3b3b3)]/10 rounded-full animate-pulse'
     ]
 
     const sizeClasses = {
@@ -77,7 +77,7 @@ export class SkeletonCore {
 
   static getRectangularClasses(options: SkeletonCoreOptions): string {
     const baseClasses = [
-      'bg-[color:var(--arnis-body,#b3b3b3)]/10 rounded animate-pulse'
+      'bg-[color:var(--guru-body,#b3b3b3)]/10 rounded animate-pulse'
     ]
 
     const sizeClasses = {

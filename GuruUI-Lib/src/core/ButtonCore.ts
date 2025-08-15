@@ -26,10 +26,10 @@ export class ButtonCore {
 
     // Variant classes
     const variantClasses = {
-      primary: 'bg-[color:var(--arnis-accent,#ffffff)] text-[color:var(--arnis-onAccent,#0b0b0b)] hover:bg-[color:var(--arnis-accentHover,#e5e5e5)] focus:ring-[color:var(--arnis-accent,#ffffff)]',
-      secondary: 'bg-[color:var(--arnis-body,#b3b3b3)]/10 text-[color:var(--arnis-body,#b3b3b3)] hover:bg-[color:var(--arnis-body,#b3b3b3)]/20 focus:ring-[color:var(--arnis-body,#b3b3b3)]',
-      outline: 'border border-[color:var(--arnis-accent,#ffffff)]/20 text-[color:var(--arnis-accent,#ffffff)] hover:bg-[color:var(--arnis-accent,#ffffff)]/10 focus:ring-[color:var(--arnis-accent,#ffffff)]',
-      ghost: 'text-[color:var(--arnis-body,#b3b3b3)] hover:bg-[color:var(--arnis-body,#b3b3b3)]/10 focus:ring-[color:var(--arnis-body,#b3b3b3)]',
+      primary: 'bg-[color:var(--guru-accent,#ffffff)] text-[color:var(--guru-onAccent,#0b0b0b)] hover:bg-[color:var(--guru-accentHover,#e5e5e5)] focus:ring-[color:var(--guru-accent,#ffffff)]',
+      secondary: 'bg-[color:var(--guru-body,#b3b3b3)]/10 text-[color:var(--guru-body,#b3b3b3)] hover:bg-[color:var(--guru-body,#b3b3b3)]/20 focus:ring-[color:var(--guru-body,#b3b3b3)]',
+      outline: 'border border-[color:var(--guru-accent,#ffffff)]/20 text-[color:var(--guru-accent,#ffffff)] hover:bg-[color:var(--guru-accent,#ffffff)]/10 focus:ring-[color:var(--guru-accent,#ffffff)]',
+      ghost: 'text-[color:var(--guru-body,#b3b3b3)] hover:bg-[color:var(--guru-body,#b3b3b3)]/10 focus:ring-[color:var(--guru-body,#b3b3b3)]',
       danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-600'
     }
 

@@ -52,7 +52,7 @@ export const Rating: React.FC<RatingProps> = ({
             onMouseEnter={() => handleMouseEnter()}
             disabled={readonly}
             className={cn(
-              'transition-colors focus:outline-none focus:ring-2 focus:ring-[color:var(--arnis-accent,#ffffff)]/60 rounded',
+              'transition-colors focus:outline-none focus:ring-2 focus:ring-[color:var(--guru-accent,#ffffff)]/60 rounded',
               sizes[size],
               isFilled 
                 ? 'text-yellow-400 fill-current' 

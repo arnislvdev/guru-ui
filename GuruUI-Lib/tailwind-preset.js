@@ -4,18 +4,18 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        'arnis-fade-in': {
+        'guru-fade-in': {
           '0%': { opacity: '0', transform: 'translateY(4px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' }
         },
-        'arnis-scale-in': {
+        'guru-scale-in': {
           '0%': { opacity: '0', transform: 'scale(0.98)' },
           '100%': { opacity: '1', transform: 'scale(1)' }
         }
       },
       animation: {
-        'fade-in': 'arnis-fade-in 180ms ease-out both',
-        'scale-in': 'arnis-scale-in 180ms ease-out both'
+        'fade-in': 'guru-fade-in 180ms ease-out both',
+        'scale-in': 'guru-scale-in 180ms ease-out both'
       },
       colors: {
         background: '#121212',

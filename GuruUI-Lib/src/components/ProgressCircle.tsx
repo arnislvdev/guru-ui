@@ -45,7 +45,7 @@ export const ProgressCircle: React.FC<ProgressCircleProps> = ({ value, size = 44
           strokeDashoffset: dash,
           transformOrigin: '50% 50%'
         }}
-        className={typeof value === 'number' ? 'text-[color:var(--arnis-accent,#ffffff)] transition-[stroke-dashoffset] duration-300' : 'text-[color:var(--arnis-accent,#ffffff)] animate-spin'}
+        className={typeof value === 'number' ? 'text-[color:var(--guru-accent,#ffffff)] transition-[stroke-dashoffset] duration-300' : 'text-[color:var(--guru-accent,#ffffff)] animate-spin'}
       />
     </svg>
   )

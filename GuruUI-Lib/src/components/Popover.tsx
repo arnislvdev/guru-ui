@@ -53,7 +53,7 @@ export const Popover: React.FC<PopoverProps> = ({
       {open && (
         <div
           className={cn(
-            'absolute z-50 mt-2 min-w-[12rem] rounded-lg border border-white/10 bg-[color:var(--arnis-background,#121212)] p-3 shadow-xl',
+            'absolute z-50 mt-2 min-w-[12rem] rounded-lg border border-white/10 bg-[color:var(--guru-background,#121212)] p-3 shadow-xl',
             alignCls,
             animated && 'animate-scale-in'
           )}

@@ -53,7 +53,7 @@ export class ModalCore {
 
   static getContentClasses(options: ModalCoreOptions): string {
     const baseClasses = [
-      'relative bg-[color:var(--arnis-background,#121212)] border border-[color:var(--arnis-body,#b3b3b3)]/10 rounded-lg shadow-2xl transition-all duration-200'
+      'relative bg-[color:var(--guru-background,#121212)] border border-[color:var(--guru-body,#b3b3b3)]/10 rounded-lg shadow-2xl transition-all duration-200'
     ]
 
     const animationClasses = {
@@ -70,7 +70,7 @@ export class ModalCore {
   }
 
   static getHeaderClasses(): string {
-    return 'flex items-center justify-between p-4 border-b border-[color:var(--arnis-body,#b3b3b3)]/10'
+    return 'flex items-center justify-between p-4 border-b border-[color:var(--guru-body,#b3b3b3)]/10'
   }
 
   static getBodyClasses(): string {
@@ -78,11 +78,11 @@ export class ModalCore {
   }
 
   static getFooterClasses(): string {
-    return 'flex items-center justify-end gap-2 p-4 border-t border-[color:var(--arnis-body,#b3b3b3)]/10'
+    return 'flex items-center justify-end gap-2 p-4 border-t border-[color:var(--guru-body,#b3b3b3)]/10'
   }
 
   static getCloseButtonClasses(): string {
-    return 'p-1 rounded-md hover:bg-[color:var(--arnis-body,#b3b3b3)]/10 transition-colors'
+    return 'p-1 rounded-md hover:bg-[color:var(--guru-body,#b3b3b3)]/10 transition-colors'
   }
 
   static getAccessibilityProps(options: ModalCoreOptions) {

@@ -46,10 +46,10 @@ export const DatePicker: React.FC<DatePickerProps> = ({ value, onChange, placeho
       <button
         type="button"
         disabled={disabled}
-        className={cn('w-full rounded-[var(--arnis-radius,0.5rem)] border border-white/15 bg-white/5 px-3 py-2 text-left', disabled && 'opacity-60')}
+        className={cn('w-full rounded-[var(--guru-radius,0.5rem)] border border-white/15 bg-white/5 px-3 py-2 text-left', disabled && 'opacity-60')}
         onClick={() => setOpen((o) => !o)}
       >
-        <span className={cn('text-[color:var(--arnis-heading,#ffffff)]', !label && 'text-[color:var(--arnis-body,#b3b3b3)]')}>{label || placeholder}</span>
+        <span className={cn('text-[color:var(--guru-heading,#ffffff)]', !label && 'text-[color:var(--guru-body,#b3b3b3)]')}>{label || placeholder}</span>
       </button>
     }>
       <div className="w-[18rem]">
@@ -69,7 +69,7 @@ export const DatePicker: React.FC<DatePickerProps> = ({ value, onChange, placeho
           />
           <button className="px-2 py-1 hover:bg-white/10 rounded" onClick={() => setCursor(new Date(year, month + 1, 1))}>›</button>
         </div>
-        <div className="grid grid-cols-7 gap-1 px-2 pb-2 text-center text-xs text-[color:var(--arnis-body,#b3b3b3)]">
+        <div className="grid grid-cols-7 gap-1 px-2 pb-2 text-center text-xs text-[color:var(--guru-body,#b3b3b3)]">
           {['Su','Mo','Tu','We','Th','Fr','Sa'].map((d) => <div key={d}>{d}</div>)}
         </div>
         <div className="grid grid-cols-7 gap-1 px-2 pb-3">
@@ -84,9 +84,9 @@ export const DatePicker: React.FC<DatePickerProps> = ({ value, onChange, placeho
                 onClick={() => isDay && commit(d as number)}
                 className={cn(
                   'h-8 rounded text-sm hover:bg-white/10 disabled:opacity-0',
-                  isSelected && 'bg-[color:var(--arnis-accent,#ffffff)] text-[color:var(--arnis-on-accent,#0b0b0b)]',
-                  !isSelected && 'text-[color:var(--arnis-heading,#ffffff)]',
-                  isToday && !isSelected && 'ring-1 ring-[color:var(--arnis-accent,#ffffff)]/50'
+                  isSelected && 'bg-[color:var(--guru-accent,#ffffff)] text-[color:var(--guru-on-accent,#0b0b0b)]',
+                  !isSelected && 'text-[color:var(--guru-heading,#ffffff)]',
+                  isToday && !isSelected && 'ring-1 ring-[color:var(--guru-accent,#ffffff)]/50'
                 )}
               >
                 {isDay ? d : ''}

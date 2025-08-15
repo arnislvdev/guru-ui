@@ -20,9 +20,9 @@ export const Tag: React.FC<TagProps> = ({
   const baseClasses = 'inline-flex items-center gap-1.5 rounded-full font-medium transition-colors'
   
   const variants = {
-    default: 'bg-[color:var(--arnis-accent,#ffffff)] text-[color:var(--arnis-on-accent,#0b0b0b)]',
-    outline: 'border border-[color:var(--arnis-accent,#ffffff)] text-[color:var(--arnis-accent,#ffffff)] hover:bg-[color:var(--arnis-accent,#ffffff)] hover:text-[color:var(--arnis-on-accent,#0b0b0b)]',
-    subtle: 'bg-[color:var(--arnis-accent,#ffffff)]/10 text-[color:var(--arnis-accent,#ffffff)]'
+    default: 'bg-[color:var(--guru-accent,#ffffff)] text-[color:var(--guru-on-accent,#0b0b0b)]',
+    outline: 'border border-[color:var(--guru-accent,#ffffff)] text-[color:var(--guru-accent,#ffffff)] hover:bg-[color:var(--guru-accent,#ffffff)] hover:text-[color:var(--guru-on-accent,#0b0b0b)]',
+    subtle: 'bg-[color:var(--guru-accent,#ffffff)]/10 text-[color:var(--guru-accent,#ffffff)]'
   }
   
   const sizes = {

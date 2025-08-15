@@ -39,7 +39,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className={fullWidth ? 'w-full' : ''}>
         {label ? (
-          <label htmlFor={inputId} className="mb-1 block text-xs font-medium text-[color:var(--arnis-body,#b3b3b3)]">
+          <label htmlFor={inputId} className="mb-1 block text-xs font-medium text-[color:var(--guru-body,#b3b3b3)]">
             {label}
           </label>
         ) : null}
@@ -54,7 +54,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
             ref={ref}
             aria-invalid={!!error}
             aria-describedby={describedById}
-            className={`block w-full rounded-[var(--arnis-radius,0.5rem)] border border-white/10 bg-[#0f0f0f] text-[color:var(--arnis-heading,#ffffff)] placeholder-white/40 focus:border-white/20 focus:outline-none focus:ring-2 focus:ring-[color:var(--arnis-accent,#ffffff)]/60 ${sizes[size]} ${leftPad} ${rightPad} ${className}`.trim()}
+            className={`block w-full rounded-[var(--guru-radius,0.5rem)] border border-white/10 bg-[#0f0f0f] text-[color:var(--guru-heading,#ffffff)] placeholder-white/40 focus:border-white/20 focus:outline-none focus:ring-2 focus:ring-[color:var(--guru-accent,#ffffff)]/60 ${sizes[size]} ${leftPad} ${rightPad} ${className}`.trim()}
             {...props}
           />
           {rightIcon ? (

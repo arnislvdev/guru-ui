@@ -87,10 +87,10 @@ export const MultiSelect: React.FC<MultiSelectProps> = ({
     <div ref={containerRef} className={cn('relative', className)}>
       <div
         className={cn(
-          'border border-white/10 bg-white/5 rounded-md cursor-pointer transition-colors focus-within:ring-2 focus-within:ring-[color:var(--arnis-accent,#ffffff)]/60',
+          'border border-white/10 bg-white/5 rounded-md cursor-pointer transition-colors focus-within:ring-2 focus-within:ring-[color:var(--guru-accent,#ffffff)]/60',
           sizes[size],
           disabled && 'opacity-50 cursor-not-allowed',
-          isOpen && 'ring-2 ring-[color:var(--arnis-accent,#ffffff)]/60'
+          isOpen && 'ring-2 ring-[color:var(--guru-accent,#ffffff)]/60'
         )}
         onClick={() => !disabled && setIsOpen(!isOpen)}
       >
@@ -107,13 +107,13 @@ export const MultiSelect: React.FC<MultiSelectProps> = ({
               </Tag>
             ))
           ) : (
-            <span className="text-[color:var(--arnis-body,#b3b3b3)]">{placeholder}</span>
+            <span className="text-[color:var(--guru-body,#b3b3b3)]">{placeholder}</span>
           )}
         </div>
         
         <ChevronDown 
           className={cn(
-            'absolute right-2 top-1/2 -translate-y-1/2 h-4 w-4 text-[color:var(--arnis-body,#b3b3b3)] transition-transform',
+            'absolute right-2 top-1/2 -translate-y-1/2 h-4 w-4 text-[color:var(--guru-body,#b3b3b3)] transition-transform',
             isOpen && 'rotate-180'
           )} 
         />
@@ -128,7 +128,7 @@ export const MultiSelect: React.FC<MultiSelectProps> = ({
               onChange={(e) => setSearchTerm(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Search options..."
-              className="w-full px-2 py-1 text-sm bg-white/5 border border-white/10 rounded text-[color:var(--arnis-heading,#ffffff)] placeholder-[color:var(--arnis-body,#b3b3b3)] focus:outline-none focus:ring-2 focus:ring-[color:var(--arnis-accent,#ffffff)]/60"
+              className="w-full px-2 py-1 text-sm bg-white/5 border border-white/10 rounded text-[color:var(--guru-heading,#ffffff)] placeholder-[color:var(--guru-body,#b3b3b3)] focus:outline-none focus:ring-2 focus:ring-[color:var(--guru-accent,#ffffff)]/60"
               autoFocus
             />
           </div>
@@ -146,14 +146,14 @@ export const MultiSelect: React.FC<MultiSelectProps> = ({
                 >
                   <div className="w-4 h-4 border border-white/20 rounded flex items-center justify-center">
                     {value.includes(option.value) && (
-                      <Check className="h-3 w-3 text-[color:var(--arnis-accent,#ffffff)]" />
+                      <Check className="h-3 w-3 text-[color:var(--guru-accent,#ffffff)]" />
                     )}
                   </div>
-                  <span className="text-sm text-[color:var(--arnis-heading,#ffffff)]">{option.label}</span>
+                  <span className="text-sm text-[color:var(--guru-heading,#ffffff)]">{option.label}</span>
                 </div>
               ))
             ) : (
-              <div className="px-3 py-2 text-sm text-[color:var(--arnis-body,#b3b3b3)]">
+              <div className="px-3 py-2 text-sm text-[color:var(--guru-body,#b3b3b3)]">
                 No options found
               </div>
             )}

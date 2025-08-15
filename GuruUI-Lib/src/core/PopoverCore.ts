@@ -45,7 +45,7 @@ export class PopoverCore {
 
   static getContentClasses(options: PopoverCoreOptions): string {
     const baseClasses = [
-      'relative bg-[color:var(--arnis-background,#121212)] border border-white/10 rounded-lg'
+      'relative bg-[color:var(--guru-background,#121212)] border border-white/10 rounded-lg'
     ]
 
     // Variant classes
@@ -73,7 +73,7 @@ export class PopoverCore {
 
   static getArrowClasses(options: PopoverCoreOptions): string {
     const baseClasses = [
-      'absolute w-2 h-2 rotate-45 bg-[color:var(--arnis-background,#121212)] border border-white/10'
+      'absolute w-2 h-2 rotate-45 bg-[color:var(--guru-background,#121212)] border border-white/10'
     ]
 
     // Position-based arrow classes
@@ -109,7 +109,7 @@ export class PopoverCore {
 
   static getTitleClasses(options: PopoverCoreOptions): string {
     const baseClasses = [
-      'text-sm font-semibold text-[color:var(--arnis-heading,#ffffff)]'
+      'text-sm font-semibold text-[color:var(--guru-heading,#ffffff)]'
     ]
 
     const sizeClasses = {
@@ -126,7 +126,7 @@ export class PopoverCore {
 
   static getBodyClasses(options: PopoverCoreOptions): string {
     const baseClasses = [
-      'text-sm text-[color:var(--arnis-body,#b3b3b3)]'
+      'text-sm text-[color:var(--guru-body,#b3b3b3)]'
     ]
 
     const sizeClasses = {
@@ -161,9 +161,9 @@ export class PopoverCore {
   static getCloseButtonClasses(): string {
     return [
       'inline-flex items-center justify-center w-6 h-6 rounded-md',
-      'text-[color:var(--arnis-body,#b3b3b3)] hover:text-[color:var(--arnis-heading,#ffffff)]',
+      'text-[color:var(--guru-body,#b3b3b3)] hover:text-[color:var(--guru-heading,#ffffff)]',
       'hover:bg-white/5 transition-colors duration-200',
-      'focus:outline-none focus:ring-2 focus:ring-[color:var(--arnis-accent,#ffffff)]/60'
+      'focus:outline-none focus:ring-2 focus:ring-[color:var(--guru-accent,#ffffff)]/60'
     ].join(' ')
   }
 

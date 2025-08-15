@@ -66,15 +66,15 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({ children, max = 5,
             key={t.id}
             className={cn(
               'pointer-events-auto min-w-[18rem] rounded-lg border px-4 py-3 shadow-lg animate-scale-in',
-              'bg-[color:var(--arnis-background,#121212)] border-white/10',
+              'bg-[color:var(--guru-background,#121212)] border-white/10',
               t.variant === 'success' && 'border-emerald-400/40',
               t.variant === 'warning' && 'border-amber-400/40',
               t.variant === 'danger' && 'border-rose-400/40'
             )}
           >
-            {t.title && <div className="font-semibold text-[color:var(--arnis-heading,#ffffff)]">{t.title}</div>}
+            {t.title && <div className="font-semibold text-[color:var(--guru-heading,#ffffff)]">{t.title}</div>}
             {t.description && (
-              <div className="mt-1 text-sm text-[color:var(--arnis-body,#b3b3b3)]">{t.description}</div>
+              <div className="mt-1 text-sm text-[color:var(--guru-body,#b3b3b3)]">{t.description}</div>
             )}
           </div>
         ))}

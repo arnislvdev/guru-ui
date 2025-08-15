@@ -82,7 +82,7 @@ export const NumberInput: React.FC<NumberInputProps> = ({
         onClick={handleDecrement}
         disabled={disabled || value <= min}
         className={cn(
-          'flex items-center justify-center border border-r-0 border-white/10 bg-white/5 text-[color:var(--arnis-body,#b3b3b3)] hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[color:var(--arnis-accent,#ffffff)]/60 rounded-l-md',
+          'flex items-center justify-center border border-r-0 border-white/10 bg-white/5 text-[color:var(--guru-body,#b3b3b3)] hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[color:var(--guru-accent,#ffffff)]/60 rounded-l-md',
           buttonSizes[size],
           (disabled || value <= min) && 'opacity-50 cursor-not-allowed'
         )}
@@ -102,7 +102,7 @@ export const NumberInput: React.FC<NumberInputProps> = ({
         disabled={disabled}
         placeholder={placeholder}
         className={cn(
-          'border border-white/10 bg-white/5 text-[color:var(--arnis-heading,#ffffff)] placeholder-[color:var(--arnis-body,#b3b3b3)] focus:outline-none focus:ring-2 focus:ring-[color:var(--arnis-accent,#ffffff)]/60 transition-shadow',
+          'border border-white/10 bg-white/5 text-[color:var(--guru-heading,#ffffff)] placeholder-[color:var(--guru-body,#b3b3b3)] focus:outline-none focus:ring-2 focus:ring-[color:var(--guru-accent,#ffffff)]/60 transition-shadow',
           sizes[size],
           'text-center'
         )}
@@ -113,7 +113,7 @@ export const NumberInput: React.FC<NumberInputProps> = ({
         onClick={handleIncrement}
         disabled={disabled || value >= max}
         className={cn(
-          'flex items-center justify-center border border-l-0 border-white/10 bg-white/5 text-[color:var(--arnis-body,#b3b3b3)] hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[color:var(--arnis-accent,#ffffff)]/60 rounded-r-md',
+          'flex items-center justify-center border border-l-0 border-white/10 bg-white/5 text-[color:var(--guru-body,#b3b3b3)] hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[color:var(--guru-accent,#ffffff)]/60 rounded-r-md',
           buttonSizes[size],
           (disabled || value >= max) && 'opacity-50 cursor-not-allowed'
         )}

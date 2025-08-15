@@ -58,7 +58,7 @@ export const Markdown: React.FC<MarkdownProps> = ({
           <Tag 
             key={`heading-${i}`} 
             className={cn(
-              'font-bold text-[color:var(--arnis-heading,#ffffff)] mb-2',
+              'font-bold text-[color:var(--guru-heading,#ffffff)] mb-2',
               level === 1 && 'text-3xl',
               level === 2 && 'text-2xl',
               level === 3 && 'text-xl',
@@ -79,13 +79,13 @@ export const Markdown: React.FC<MarkdownProps> = ({
         .replace(/`(.*?)`/g, '<code className="bg-white/10 px-1 py-0.5 rounded text-sm">$1</code>')
       
       // Links
-      processedLine = processedLine.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" className="text-[color:var(--arnis-accent,#ffffff)] hover:underline">$1</a>')
+      processedLine = processedLine.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" className="text-[color:var(--guru-accent,#ffffff)] hover:underline">$1</a>')
       
       // Lists
       if (line.match(/^[\s]*[-*+]\s/)) {
         const text = line.replace(/^[\s]*[-*+]\s/, '')
         elements.push(
-          <li key={`list-${i}`} className="ml-4 text-[color:var(--arnis-body,#b3b3b3)]">
+          <li key={`list-${i}`} className="ml-4 text-[color:var(--guru-body,#b3b3b3)]">
             <span dangerouslySetInnerHTML={{ __html: processedLine.replace(/^[\s]*[-*+]\s/, '') }} />
           </li>
         )
@@ -96,7 +96,7 @@ export const Markdown: React.FC<MarkdownProps> = ({
       if (line.match(/^[\s]*\d+\.\s/)) {
         const text = line.replace(/^[\s]*\d+\.\s/, '')
         elements.push(
-          <li key={`list-${i}`} className="ml-4 text-[color:var(--arnis-body,#b3b3b3)]">
+          <li key={`list-${i}`} className="ml-4 text-[color:var(--guru-body,#b3b3b3)]">
             <span dangerouslySetInnerHTML={{ __html: processedLine.replace(/^[\s]*\d+\.\s/, '') }} />
           </li>
         )
@@ -109,7 +109,7 @@ export const Markdown: React.FC<MarkdownProps> = ({
         elements.push(
           <blockquote 
             key={`quote-${i}`} 
-            className="border-l-4 border-[color:var(--arnis-accent,#ffffff)] pl-4 italic text-[color:var(--arnis-body,#b3b3b3)] my-2"
+            className="border-l-4 border-[color:var(--guru-accent,#ffffff)] pl-4 italic text-[color:var(--guru-body,#b3b3b3)] my-2"
           >
             {text}
           </blockquote>
@@ -136,7 +136,7 @@ export const Markdown: React.FC<MarkdownProps> = ({
         elements.push(
           <p 
             key={`p-${i}`} 
-            className="text-[color:var(--arnis-body,#b3b3b3)] mb-2 leading-relaxed"
+            className="text-[color:var(--guru-body,#b3b3b3)] mb-2 leading-relaxed"
             dangerouslySetInnerHTML={{ __html: processedLine }}
           />
         )

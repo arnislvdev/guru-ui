@@ -27,7 +27,7 @@ export class ToggleCore {
 
     // Variant classes
     const variantClasses = {
-      default: 'bg-[color:var(--arnis-body,#b3b3b3)]/20 focus:ring-[color:var(--arnis-accent,#ffffff)]',
+      default: 'bg-[color:var(--guru-body,#b3b3b3)]/20 focus:ring-[color:var(--guru-accent,#ffffff)]',
       success: 'bg-green-500/20 focus:ring-green-500',
       warning: 'bg-yellow-500/20 focus:ring-yellow-500',
       danger: 'bg-red-500/20 focus:ring-red-500'
@@ -46,7 +46,7 @@ export class ToggleCore {
 
   static getToggleActiveClasses(options: ToggleCoreOptions): string {
     const variantActiveClasses = {
-      default: 'bg-[color:var(--arnis-accent,#ffffff)]',
+      default: 'bg-[color:var(--guru-accent,#ffffff)]',
       success: 'bg-green-500',
       warning: 'bg-yellow-500',
       danger: 'bg-red-500'
@@ -94,7 +94,7 @@ export class ToggleCore {
     }
 
     const variantClasses = {
-      default: 'text-[color:var(--arnis-heading,#ffffff)]',
+      default: 'text-[color:var(--guru-heading,#ffffff)]',
       success: 'text-green-400',
       warning: 'text-yellow-400',
       danger: 'text-red-400'
@@ -122,7 +122,7 @@ export class ToggleCore {
     }
 
     const variantClasses = {
-      default: 'text-[color:var(--arnis-body,#b3b3b3)]',
+      default: 'text-[color:var(--guru-body,#b3b3b3)]',
       success: 'text-green-400/80',
       warning: 'text-yellow-400/80',
       danger: 'text-red-400/80'

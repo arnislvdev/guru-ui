@@ -42,7 +42,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
               stroke="currentColor"
               strokeWidth="3"
             >
-              <path d="M5 13l4 4L19 7" className="text-[color:var(--arnis-on-accent,#0b0b0b)]" />
+              <path d="M5 13l4 4L19 7" className="text-[color:var(--guru-on-accent,#0b0b0b)]" />
             </svg>
           </span>
           {(label || description) && (

@@ -4,12 +4,12 @@
 
 :root { color-scheme: dark; }
 
-html, body, #root { height: 100%; background: var(--arnis-background, #121212); }
+html, body, #root { height: 100%; background: var(--guru-background, #121212); }
 
-body { font-family: var(--arnis-font, theme('fontFamily.sans')); color: var(--arnis-body, #b3b3b3); }
+body { font-family: var(--guru-font, theme('fontFamily.sans')); color: var(--guru-body, #b3b3b3); }
 
-a { color: var(--arnis-accent, #1e90ff); }
-a:hover { color: var(--arnis-accent-hover, #1677d9); }
+a { color: var(--guru-accent, #1e90ff); }
+a:hover { color: var(--guru-accent-hover, #1677d9); }
 
 /* Custom scrollbar matching theme */
 * {

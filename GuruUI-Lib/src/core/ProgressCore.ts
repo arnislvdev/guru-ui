@@ -29,7 +29,7 @@ export class ProgressCore {
 
   static getTrackClasses(options: ProgressCoreOptions): string {
     const baseClasses = [
-      'w-full bg-[color:var(--arnis-body,#b3b3b3)]/10 rounded-full overflow-hidden'
+      'w-full bg-[color:var(--guru-body,#b3b3b3)]/10 rounded-full overflow-hidden'
     ]
 
     const roundedClasses = options.rounded ? 'rounded-full' : 'rounded'
@@ -47,7 +47,7 @@ export class ProgressCore {
 
     // Variant classes
     const variantClasses = {
-      default: 'bg-[color:var(--arnis-accent,#ffffff)]',
+      default: 'bg-[color:var(--guru-accent,#ffffff)]',
       success: 'bg-green-500',
       warning: 'bg-yellow-500',
       danger: 'bg-red-500'
@@ -84,7 +84,7 @@ export class ProgressCore {
     }
 
     const variantClasses = {
-      default: 'text-[color:var(--arnis-heading,#ffffff)]',
+      default: 'text-[color:var(--guru-heading,#ffffff)]',
       success: 'text-green-400',
       warning: 'text-yellow-400',
       danger: 'text-red-400'
@@ -109,7 +109,7 @@ export class ProgressCore {
     }
 
     const variantClasses = {
-      default: 'text-[color:var(--arnis-body,#b3b3b3)]',
+      default: 'text-[color:var(--guru-body,#b3b3b3)]',
       success: 'text-green-400',
       warning: 'text-yellow-400',
       danger: 'text-red-400'

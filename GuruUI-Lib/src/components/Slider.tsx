@@ -56,11 +56,11 @@ export const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
             'w-full rounded-full focus:outline-none',
             height
           )}
-          style={{ accentColor: 'var(--arnis-accent, #ffffff)' } as React.CSSProperties}
+          style={{ accentColor: 'var(--guru-accent, #ffffff)' } as React.CSSProperties}
           {...props}
         />
         {showValue && (
-          <div className="mt-2 text-sm text-[color:var(--arnis-body,#b3b3b3)]">{current}</div>
+          <div className="mt-2 text-sm text-[color:var(--guru-body,#b3b3b3)]">{current}</div>
         )}
       </div>
     )

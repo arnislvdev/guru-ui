@@ -1,6 +1,6 @@
-# Contributing to ArnisUX
+# Contributing to GuruUI
 
-Thank you for wanting to help improve ArnisUX! This guide explains how you can contribute.
+Thank you for wanting to help improve GuruUI! This guide explains how you can contribute.
 
 ## How to Help
 
@@ -29,8 +29,8 @@ Thank you for wanting to help improve ArnisUX! This guide explains how you can c
 ### Setup Steps
 1. Clone the repository
    ```bash
-   git clone https://github.com/arnis-lv/arnis-ux.git
-   cd arnis-ux
+   git clone https://github.com/guru-lv/guru-ui.git
+   cd guru-ui
    ```
 
 2. Install dependencies
@@ -107,4 +107,4 @@ Thank you for wanting to help improve ArnisUX! This guide explains how you can c
 - Join discussions in GitHub
 - Ask in the community forum
 
-Thank you for contributing to ArnisUX!
+Thank you for contributing to GuruUI!

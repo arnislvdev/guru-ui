@@ -35,10 +35,10 @@ export const Dropdown: React.FC<DropdownProps> = ({
       <button
         type="button"
         disabled={disabled}
-        className={cn('inline-flex items-center gap-2 rounded border border-white/10 bg-white/5 px-2 py-1 text-sm text-[color:var(--arnis-heading,#ffffff)] hover:bg-white/10 disabled:opacity-60', className)}
+        className={cn('inline-flex items-center gap-2 rounded border border-white/10 bg-white/5 px-2 py-1 text-sm text-[color:var(--guru-heading,#ffffff)] hover:bg-white/10 disabled:opacity-60', className)}
         onClick={() => setOpen(o => !o)}
       >
-        <span className={cn(!selected && 'text-[color:var(--arnis-body,#b3b3b3)]')}>{label}</span>
+        <span className={cn(!selected && 'text-[color:var(--guru-body,#b3b3b3)]')}>{label}</span>
         <span className="opacity-70">▾</span>
       </button>
     }>
@@ -47,7 +47,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
           {options.map(opt => (
             <button
               key={opt.value}
-              className={cn('flex w-full items-center justify-between px-3 py-2 text-left text-sm hover:bg-white/10', value === opt.value ? 'text-[color:var(--arnis-accent,#ffffff)]' : 'text-[color:var(--arnis-heading,#ffffff)]')}
+              className={cn('flex w-full items-center justify-between px-3 py-2 text-left text-sm hover:bg-white/10', value === opt.value ? 'text-[color:var(--guru-accent,#ffffff)]' : 'text-[color:var(--guru-heading,#ffffff)]')}
               onClick={() => { onChange?.(opt.value); close() }}
             >
               <span>{opt.label ?? opt.value}</span>

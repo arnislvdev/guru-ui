@@ -74,6 +74,6 @@ button:disabled {
 
 /* Focus ring offset for dark backgrounds */
 .focus\:ring-offset-2:focus {
-  --tw-ring-offset-color: var(--arnis-background, #121212);
+  --tw-ring-offset-color: var(--guru-background, #121212);
 }
 </style>

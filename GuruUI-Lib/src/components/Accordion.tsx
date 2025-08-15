@@ -51,11 +51,11 @@ export const Accordion: React.FC<AccordionProps> = ({
               className="flex w-full items-center justify-between px-4 py-3 text-left hover:bg-white/5"
               onClick={() => toggle(item.id)}
             >
-              <span className="font-medium text-[color:var(--arnis-heading,#ffffff)]">{item.title}</span>
-              <span className="text-[color:var(--arnis-body,#b3b3b3)]">{open ? '−' : '+'}</span>
+              <span className="font-medium text-[color:var(--guru-heading,#ffffff)]">{item.title}</span>
+              <span className="text-[color:var(--guru-body,#b3b3b3)]">{open ? '−' : '+'}</span>
             </button>
             {open && (
-              <div className="px-4 pb-4 text-[color:var(--arnis-body,#b3b3b3)]">{item.content}</div>
+              <div className="px-4 pb-4 text-[color:var(--guru-body,#b3b3b3)]">{item.content}</div>
             )}
           </div>
         )

@@ -36,7 +36,7 @@ export const Tooltip: React.FC<TooltipProps> = ({ content, placement = 'top', ch
         id={id}
         role="tooltip"
         className={cn(
-          'pointer-events-none absolute z-40 rounded-md border border-white/10 bg-[color:var(--arnis-background,#121212)] px-2 py-1 text-xs text-[color:var(--arnis-heading,#ffffff)] opacity-0 shadow-lg transition-all duration-150 transform scale-95 group-hover:opacity-100 group-hover:scale-100 group-focus-within:opacity-100 group-focus-within:scale-100 will-change-[transform,opacity]',
+          'pointer-events-none absolute z-40 rounded-md border border-white/10 bg-[color:var(--guru-background,#121212)] px-2 py-1 text-xs text-[color:var(--guru-heading,#ffffff)] opacity-0 shadow-lg transition-all duration-150 transform scale-95 group-hover:opacity-100 group-hover:scale-100 group-focus-within:opacity-100 group-focus-within:scale-100 will-change-[transform,opacity]',
           pos,
           origin
         )}

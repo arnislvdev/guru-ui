@@ -18,15 +18,15 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
             ref={ref}
             type="radio"
             disabled={disabled}
-            className={`peer absolute inset-0 cursor-pointer appearance-none rounded-full border border-white/20 bg-white/5 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--arnis-accent,#ffffff)]/60 focus-visible:ring-offset-2 ring-offset-[color:var(--arnis-background,#121212)] checked:border-[color:var(--arnis-accent,#ffffff)] ${ring}`}
+            className={`peer absolute inset-0 cursor-pointer appearance-none rounded-full border border-white/20 bg-white/5 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--guru-accent,#ffffff)]/60 focus-visible:ring-offset-2 ring-offset-[color:var(--guru-background,#121212)] checked:border-[color:var(--guru-accent,#ffffff)] ${ring}`}
             {...props}
           />
-          <span className={`pointer-events-none absolute inset-0 m-auto rounded-full bg-[color:var(--arnis-accent,#ffffff)] opacity-0 transition-opacity duration-200 peer-checked:opacity-100 ${dot}`} />
+          <span className={`pointer-events-none absolute inset-0 m-auto rounded-full bg-[color:var(--guru-accent,#ffffff)] opacity-0 transition-opacity duration-200 peer-checked:opacity-100 ${dot}`} />
         </span>
         {(label || description) && (
           <span className="leading-snug">
-            {label && <span className="block text-[color:var(--arnis-heading,#ffffff)]">{label}</span>}
-            {description && <span className="block text-sm text-[color:var(--arnis-body,#b3b3b3)]">{description}</span>}
+            {label && <span className="block text-[color:var(--guru-heading,#ffffff)]">{label}</span>}
+            {description && <span className="block text-sm text-[color:var(--guru-body,#b3b3b3)]">{description}</span>}
           </span>
         )}
       </label>

@@ -21,7 +21,7 @@
           stroke="currentColor"
           stroke-width="3"
         >
-          <path d="M5 13l4 4L19 7" class="text-[color:var(--arnis-on-accent,#0b0b0b)]" />
+          <path d="M5 13l4 4L19 7" class="text-[color:var(--guru-on-accent,#0b0b0b)]" />
         </svg>
       </span>
       <span v-if="label || description" class="leading-snug ml-3">

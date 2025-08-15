@@ -45,7 +45,7 @@ export class MenuCore {
 
   static getContentClasses(options: MenuCoreOptions): string {
     const baseClasses = [
-      'bg-[color:var(--arnis-background,#121212)] border border-white/10 rounded-lg overflow-hidden'
+      'bg-[color:var(--guru-background,#121212)] border border-white/10 rounded-lg overflow-hidden'
     ]
 
     // Variant classes
@@ -99,7 +99,7 @@ export class MenuCore {
 
   static getItemActiveClasses(options: MenuCoreOptions): string {
     const baseClasses = [
-      'bg-white/10 text-[color:var(--arnis-heading,#ffffff)]'
+      'bg-white/10 text-[color:var(--guru-heading,#ffffff)]'
     ]
 
     return baseClasses.join(' ')
@@ -114,15 +114,15 @@ export class MenuCore {
   }
 
   static getItemTextClasses(): string {
-    return 'flex-1 text-[color:var(--arnis-body,#b3b3b3)]'
+    return 'flex-1 text-[color:var(--guru-body,#b3b3b3)]'
   }
 
   static getItemIconClasses(): string {
-    return 'mr-2 h-4 w-4 text-[color:var(--arnis-body,#b3b3b3)]'
+    return 'mr-2 h-4 w-4 text-[color:var(--guru-body,#b3b3b3)]'
   }
 
   static getItemRightIconClasses(): string {
-    return 'ml-auto h-4 w-4 text-[color:var(--arnis-body,#b3b3b3)]'
+    return 'ml-auto h-4 w-4 text-[color:var(--guru-body,#b3b3b3)]'
   }
 
   static getSeparatorClasses(): string {
@@ -130,7 +130,7 @@ export class MenuCore {
   }
 
   static getGroupClasses(): string {
-    return 'px-2 py-1.5 text-xs font-semibold text-[color:var(--arnis-body,#b3b3b3)]'
+    return 'px-2 py-1.5 text-xs font-semibold text-[color:var(--guru-body,#b3b3b3)]'
   }
 
   static getSubmenuClasses(options: MenuCoreOptions): string {

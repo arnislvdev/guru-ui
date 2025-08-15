@@ -8,23 +8,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        'arnis': {
-          background: 'var(--arnis-background, #121212)',
-          'background-hover': 'var(--arnis-background-hover, #1a1a1a)',
-          heading: 'var(--arnis-heading, #ffffff)',
-          body: 'var(--arnis-body, #b3b3b3)',
-          accent: 'var(--arnis-accent, #ffffff)',
-          'accent-hover': 'var(--arnis-accent-hover, #e5e5e5)',
-          'on-accent': 'var(--arnis-on-accent, #0b0b0b)',
-          primary: 'var(--arnis-primary, #3b82f6)',
-          secondary: 'var(--arnis-secondary, #64748b)',
-          success: 'var(--arnis-success, #10b981)',
-          warning: 'var(--arnis-warning, #f59e0b)',
-          danger: 'var(--arnis-danger, #ef4444)',
+        'guru': {
+          background: 'var(--guru-background, #121212)',
+          'background-hover': 'var(--guru-background-hover, #1a1a1a)',
+          heading: 'var(--guru-heading, #ffffff)',
+          body: 'var(--guru-body, #b3b3b3)',
+          accent: 'var(--guru-accent, #ffffff)',
+          'accent-hover': 'var(--guru-accent-hover, #e5e5e5)',
+          'on-accent': 'var(--guru-on-accent, #0b0b0b)',
+          primary: 'var(--guru-primary, #3b82f6)',
+          secondary: 'var(--guru-secondary, #64748b)',
+          success: 'var(--guru-success, #10b981)',
+          warning: 'var(--guru-warning, #f59e0b)',
+          danger: 'var(--guru-danger, #ef4444)',
         }
       },
       borderRadius: {
-        'arnis': 'var(--arnis-radius, 0.5rem)'
+        'guru': 'var(--guru-radius, 0.5rem)'
       },
       animation: {
         'fade-in': 'fadeIn 0.2s ease-in-out',

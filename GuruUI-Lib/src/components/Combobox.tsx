@@ -89,7 +89,7 @@ export const Combobox: React.FC<ComboboxProps> = ({
   return (
     <Popover open={open} onOpenChange={setOpen} align="start" trigger={
       <div className={cn('w-full', className)}>
-        <div className={cn('flex items-center gap-2 rounded-[var(--arnis-radius,0.5rem)] border border-white/15 bg-white/5 px-3 py-2', disabled && 'opacity-60 cursor-not-allowed')}
+        <div className={cn('flex items-center gap-2 rounded-[var(--guru-radius,0.5rem)] border border-white/15 bg-white/5 px-3 py-2', disabled && 'opacity-60 cursor-not-allowed')}
              onClick={() => !disabled && setOpen((o) => !o)}>
           <input
             ref={inputRef}
@@ -98,25 +98,25 @@ export const Combobox: React.FC<ComboboxProps> = ({
             onChange={(e) => { setQuery(e.target.value); setOpen(true) }}
             onKeyDown={onKeyDown}
             disabled={disabled}
-            className="flex-1 bg-transparent text-[color:var(--arnis-heading,#ffffff)] placeholder:text-[color:var(--arnis-body,#b3b3b3)] focus:outline-none"
+            className="flex-1 bg-transparent text-[color:var(--guru-heading,#ffffff)] placeholder:text-[color:var(--guru-body,#b3b3b3)] focus:outline-none"
           />
           {clearable && selected && (
             <button
               type="button"
-              className="text-sm text-[color:var(--arnis-body,#b3b3b3)] hover:text-[color:var(--arnis-heading,#ffffff)]"
+              className="text-sm text-[color:var(--guru-body,#b3b3b3)] hover:text-[color:var(--guru-heading,#ffffff)]"
               onClick={(e) => { e.stopPropagation(); multiple ? onChange?.([]) : onChange?.('') }}
             >
               Clear
             </button>
           )}
-          <span className="text-[color:var(--arnis-body,#b3b3b3)]">▾</span>
+          <span className="text-[color:var(--guru-body,#b3b3b3)]">▾</span>
         </div>
       </div>
     }>
       {(close) => (
         <div ref={listRef} className="max-h-64 w-full overflow-auto">
           {filtered.length === 0 && (
-            <div className="px-3 py-2 text-sm text-[color:var(--arnis-body,#b3b3b3)]">No results</div>
+            <div className="px-3 py-2 text-sm text-[color:var(--guru-body,#b3b3b3)]">No results</div>
           )}
           {filtered.map((opt, idx) => {
             const isActive = idx === activeIndex
@@ -129,7 +129,7 @@ export const Combobox: React.FC<ComboboxProps> = ({
                 onClick={() => { commit(opt.value); if (!multiple) close() }}
                 className={cn('flex w-full items-center justify-between px-3 py-2 text-left text-sm',
                   isActive ? 'bg-white/10' : 'hover:bg-white/5',
-                  isSelected ? 'text-[color:var(--arnis-accent,#ffffff)]' : 'text-[color:var(--arnis-heading,#ffffff)]')}
+                  isSelected ? 'text-[color:var(--guru-accent,#ffffff)]' : 'text-[color:var(--guru-heading,#ffffff)]')}
               >
                 <span>{opt.label ?? opt.value}</span>
                 {isSelected && <span>✓</span>}

@@ -65,7 +65,7 @@ export const Tree: React.FC<TreeProps> = ({
         <div
           className={cn(
             'flex items-center gap-2 px-2 py-1.5 rounded cursor-pointer transition-colors',
-            isSelected && 'bg-[color:var(--arnis-accent,#ffffff)]/20',
+            isSelected && 'bg-[color:var(--guru-accent,#ffffff)]/20',
             !isDisabled && 'hover:bg-white/5',
             isDisabled && 'opacity-50 cursor-not-allowed'
           )}

@@ -6,7 +6,7 @@ export interface AlertOptions extends AlertCoreOptions {
   onDismiss?: () => void
 }
 
-export class ArnisAlert {
+export class GuruAlert {
   private element: HTMLDivElement
   private options: AlertOptions
 
@@ -127,14 +127,14 @@ export class ArnisAlert {
 }
 
 // Factory function
-export function createAlert(options: AlertOptions): ArnisAlert {
-  return new ArnisAlert(options)
+export function createAlert(options: AlertOptions): GuruAlert {
+  return new GuruAlert(options)
 }
 
 // Auto-initialize alerts with data attributes
 export function initializeAlerts(): void {
   document.addEventListener('DOMContentLoaded', () => {
-    const alerts = document.querySelectorAll('[data-arnis-alert]')
+    const alerts = document.querySelectorAll('[data-guru-alert]')
     
     alerts.forEach(alertElement => {
       const alert = alertElement as HTMLElement
@@ -148,15 +148,15 @@ export function initializeAlerts(): void {
         border: alert.hasAttribute('data-border'),
         rounded: alert.hasAttribute('data-rounded'),
         onDismiss: () => {
-          alert.dispatchEvent(new CustomEvent('arnis-alert-dismiss'))
+          alert.dispatchEvent(new CustomEvent('guru-alert-dismiss'))
         }
       }
 
-      const arnisAlert = new ArnisAlert(options)
-      arnisAlert.mount(alert)
+      const guruAlert = new GuruAlert(options)
+      guruAlert.mount(alert)
       
       // Store reference
-      ;(alert as any).arnisAlert = arnisAlert
+      ;(alert as any).guruAlert = guruAlert
     })
   })
 }

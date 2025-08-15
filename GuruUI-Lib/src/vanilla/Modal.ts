@@ -7,7 +7,7 @@ export interface ModalOptions extends ModalCoreOptions {
   onOpen?: () => void
 }
 
-export class ArnisModal {
+export class GuruModal {
   private element: HTMLDivElement
   private backdrop: HTMLDivElement
   private content: HTMLDivElement
@@ -50,7 +50,7 @@ export class ArnisModal {
       
       const title = document.createElement('h2')
       title.textContent = this.options.title
-      title.className = 'text-lg font-semibold text-[color:var(--arnis-heading,#ffffff)]'
+      title.className = 'text-lg font-semibold text-[color:var(--guru-heading,#ffffff)]'
       
       header.appendChild(title)
       
@@ -84,7 +84,7 @@ export class ArnisModal {
     footer.className = ModalCore.getFooterClasses()
     
     const closeButton = document.createElement('button')
-    closeButton.className = 'inline-flex items-center justify-center rounded-[var(--arnis-radius,0.5rem)] bg-[color:var(--arnis-accent,#ffffff)] px-4 py-2 text-sm font-medium text-[color:var(--arnis-on-accent,#0b0b0b)] hover:bg-[color:var(--arnis-accent-hover,#e5e5e5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--arnis-accent,#ffffff)]/60 focus-visible:ring-offset-2 ring-offset-[color:var(--arnis-background,#121212)]'
+    closeButton.className = 'inline-flex items-center justify-center rounded-[var(--guru-radius,0.5rem)] bg-[color:var(--guru-accent,#ffffff)] px-4 py-2 text-sm font-medium text-[color:var(--guru-on-accent,#0b0b0b)] hover:bg-[color:var(--guru-accent-hover,#e5e5e5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--guru-accent,#ffffff)]/60 focus-visible:ring-offset-2 ring-offset-[color:var(--guru-background,#121212)]'
     closeButton.textContent = 'Close'
     closeButton.addEventListener('click', () => this.close())
     
@@ -183,14 +183,14 @@ export class ArnisModal {
 }
 
 // Factory function
-export function createModal(options: ModalOptions): ArnisModal {
-  return new ArnisModal(options)
+export function createModal(options: ModalOptions): GuruModal {
+  return new GuruModal(options)
 }
 
 // Auto-initialize modals with data attributes
 export function initializeModals(): void {
   document.addEventListener('DOMContentLoaded', () => {
-    const modals = document.querySelectorAll('[data-arnis-modal]')
+    const modals = document.querySelectorAll('[data-guru-modal]')
     
     modals.forEach(modalElement => {
       const modal = modalElement as HTMLElement
@@ -205,18 +205,18 @@ export function initializeModals(): void {
         backdrop: modal.hasAttribute('data-backdrop'),
         animation: (modal.getAttribute('data-animation') as any) || 'fade',
         onClose: () => {
-          modal.dispatchEvent(new CustomEvent('arnis-modal-close'))
+          modal.dispatchEvent(new CustomEvent('guru-modal-close'))
         }
       }
 
-      const arnisModal = new ArnisModal(options)
+      const guruModal = new GuruModal(options)
       
       // Store reference
-      ;(modal as any).arnisModal = arnisModal
+      ;(modal as any).guruModal = guruModal
       
       // Add open method
-      ;(modal as any).openModal = () => arnisModal.open()
-      ;(modal as any).closeModal = () => arnisModal.close()
+      ;(modal as any).openModal = () => guruModal.open()
+      ;(modal as any).closeModal = () => guruModal.close()
     })
   })
 }

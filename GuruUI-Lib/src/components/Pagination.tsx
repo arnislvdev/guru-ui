@@ -28,19 +28,19 @@ export const Pagination: React.FC<PaginationProps> = ({ page, pageCount, onPageC
 
   return (
     <nav className={cn('inline-flex items-center gap-1', className)} aria-label="Pagination">
-      <button className="px-3 py-1.5 rounded border border-white/10 text-[color:var(--arnis-heading,#ffffff)] hover:bg-white/10 disabled:opacity-40" disabled={page <= 1} onClick={() => onPageChange(clamp(page - 1))}>
+      <button className="px-3 py-1.5 rounded border border-white/10 text-[color:var(--guru-heading,#ffffff)] hover:bg-white/10 disabled:opacity-40" disabled={page <= 1} onClick={() => onPageChange(clamp(page - 1))}>
         Prev
       </button>
       {pages.map((p, idx) => (
         p === '…' ? (
-          <span key={idx} className="px-2 text-[color:var(--arnis-body,#b3b3b3)]">…</span>
+          <span key={idx} className="px-2 text-[color:var(--guru-body,#b3b3b3)]">…</span>
         ) : (
-          <button key={idx} className={cn('px-3 py-1.5 rounded border text-sm', p === page ? 'border-[color:var(--arnis-accent,#ffffff)] text-[color:var(--arnis-accent,#ffffff)]' : 'border-white/10 text-[color:var(--arnis-heading,#ffffff)] hover:bg-white/10')} onClick={() => onPageChange(p)}>
+          <button key={idx} className={cn('px-3 py-1.5 rounded border text-sm', p === page ? 'border-[color:var(--guru-accent,#ffffff)] text-[color:var(--guru-accent,#ffffff)]' : 'border-white/10 text-[color:var(--guru-heading,#ffffff)] hover:bg-white/10')} onClick={() => onPageChange(p)}>
             {p}
           </button>
         )
       ))}
-      <button className="px-3 py-1.5 rounded border border-white/10 text-[color:var(--arnis-heading,#ffffff)] hover:bg-white/10 disabled:opacity-40" disabled={page >= pageCount} onClick={() => onPageChange(clamp(page + 1))}>
+      <button className="px-3 py-1.5 rounded border border-white/10 text-[color:var(--guru-heading,#ffffff)] hover:bg-white/10 disabled:opacity-40" disabled={page >= pageCount} onClick={() => onPageChange(clamp(page + 1))}>
         Next
       </button>
     </nav>

@@ -10,7 +10,7 @@ export function cn(...classes: (string | undefined | null | false)[]): string {
 /**
  * Generates a unique ID for components
  */
-export function generateId(prefix = 'arnis'): string {
+export function generateId(prefix = 'guru'): string {
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`
 }
 

@@ -27,9 +27,9 @@ export class CheckboxCore {
 
     // Variant classes
     const variantClasses = {
-      default: 'border-[color:var(--arnis-body,#b3b3b3)]/20 bg-[color:var(--arnis-background,#121212)] text-[color:var(--arnis-accent,#ffffff)] focus:ring-[color:var(--arnis-accent,#ffffff)]',
-      error: 'border-red-500/50 bg-[color:var(--arnis-background,#121212)] text-red-500 focus:ring-red-500',
-      success: 'border-green-500/50 bg-[color:var(--arnis-background,#121212)] text-green-500 focus:ring-green-500'
+      default: 'border-[color:var(--guru-body,#b3b3b3)]/20 bg-[color:var(--guru-background,#121212)] text-[color:var(--guru-accent,#ffffff)] focus:ring-[color:var(--guru-accent,#ffffff)]',
+      error: 'border-red-500/50 bg-[color:var(--guru-background,#121212)] text-red-500 focus:ring-red-500',
+      success: 'border-green-500/50 bg-[color:var(--guru-background,#121212)] text-green-500 focus:ring-green-500'
     }
 
     // Disabled classes
@@ -55,7 +55,7 @@ export class CheckboxCore {
     }
 
     const variantClasses = {
-      default: 'text-[color:var(--arnis-heading,#ffffff)]',
+      default: 'text-[color:var(--guru-heading,#ffffff)]',
       error: 'text-red-400',
       success: 'text-green-400'
     }
@@ -82,7 +82,7 @@ export class CheckboxCore {
     }
 
     const variantClasses = {
-      default: 'text-[color:var(--arnis-body,#b3b3b3)]',
+      default: 'text-[color:var(--guru-body,#b3b3b3)]',
       error: 'text-red-400/80',
       success: 'text-green-400/80'
     }

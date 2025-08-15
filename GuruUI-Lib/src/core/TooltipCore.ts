@@ -25,7 +25,7 @@ export class TooltipCore {
     const variantClasses = {
       dark: 'bg-gray-900 text-white',
       light: 'bg-white text-gray-900 border border-gray-200',
-      accent: 'bg-[color:var(--arnis-accent,#ffffff)] text-[color:var(--arnis-on-accent,#0b0b0b)]'
+      accent: 'bg-[color:var(--guru-accent,#ffffff)] text-[color:var(--guru-on-accent,#0b0b0b)]'
     }
 
     // Size classes
@@ -60,7 +60,7 @@ export class TooltipCore {
     const variantClasses = {
       dark: 'bg-gray-900',
       light: 'bg-white border border-gray-200',
-      accent: 'bg-[color:var(--arnis-accent,#ffffff)]'
+      accent: 'bg-[color:var(--guru-accent,#ffffff)]'
     }
 
     return [

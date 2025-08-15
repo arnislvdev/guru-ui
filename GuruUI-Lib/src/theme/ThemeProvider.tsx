@@ -33,18 +33,18 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ theme, children })
   const merged = { ...defaultTheme, ...theme }
   const style: React.CSSProperties = {
     // Expose as CSS variables for Tailwind interop and runtime theming
-    ['--arnis-background' as any]: merged.background,
-    ['--arnis-heading' as any]: merged.heading,
-    ['--arnis-body' as any]: merged.body,
-    ['--arnis-accent' as any]: merged.accent,
-    ['--arnis-accent-hover' as any]: merged.accentHover,
-    ['--arnis-on-accent' as any]: merged.onAccent,
-    ['--arnis-radius' as any]: merged.radius,
-    ['--arnis-font' as any]: merged.fontFamily
+    ['--guru-background' as any]: merged.background,
+    ['--guru-heading' as any]: merged.heading,
+    ['--guru-body' as any]: merged.body,
+    ['--guru-accent' as any]: merged.accent,
+    ['--guru-accent-hover' as any]: merged.accentHover,
+    ['--guru-on-accent' as any]: merged.onAccent,
+    ['--guru-radius' as any]: merged.radius,
+    ['--guru-font' as any]: merged.fontFamily
   }
   return (
     <ThemeContext.Provider value={merged}>
-      <div style={style} className="arnis-ux-theme">
+      <div style={style} className="guru-ui-theme">
         {children}
       </div>
     </ThemeContext.Provider>

@@ -91,7 +91,7 @@ export const Range: React.FC<RangeProps> = ({
   return (
     <div className={cn('w-full', className)}>
       {showLabels && (
-        <div className="flex justify-between text-sm text-[color:var(--arnis-body,#b3b3b3)] mb-2">
+        <div className="flex justify-between text-sm text-[color:var(--guru-body,#b3b3b3)] mb-2">
           <span>{value[0]}</span>
           <span>{value[1]}</span>
         </div>
@@ -107,7 +107,7 @@ export const Range: React.FC<RangeProps> = ({
         >
           {/* Track fill */}
           <div
-            className="absolute h-full bg-[color:var(--arnis-accent,#ffffff)] rounded-full"
+            className="absolute h-full bg-[color:var(--guru-accent,#ffffff)] rounded-full"
             style={{
               left: `${minPercent}%`,
               width: `${maxPercent - minPercent}%`
@@ -118,7 +118,7 @@ export const Range: React.FC<RangeProps> = ({
           <button
             type="button"
             className={cn(
-              'absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-[color:var(--arnis-accent,#ffffff)] rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-[color:var(--arnis-accent,#ffffff)]/60 transition-transform hover:scale-110',
+              'absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-[color:var(--guru-accent,#ffffff)] rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-[color:var(--guru-accent,#ffffff)]/60 transition-transform hover:scale-110',
               disabled && 'cursor-not-allowed'
             )}
             style={{ left: `${minPercent}%`, transform: 'translate(-50%, -50%)' }}
@@ -133,7 +133,7 @@ export const Range: React.FC<RangeProps> = ({
           <button
             type="button"
             className={cn(
-              'absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-[color:var(--arnis-accent,#ffffff)] rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-[color:var(--arnis-accent,#ffffff)]/60 transition-transform hover:scale-110',
+              'absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-[color:var(--guru-accent,#ffffff)] rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-[color:var(--guru-accent,#ffffff)]/60 transition-transform hover:scale-110',
               disabled && 'cursor-not-allowed'
             )}
             style={{ left: `${maxPercent}%`, transform: 'translate(-50%, -50%)' }}

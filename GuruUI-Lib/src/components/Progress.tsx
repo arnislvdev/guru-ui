@@ -41,13 +41,13 @@ export const Progress: React.FC<ProgressProps> = ({
         <div
           className={cn(
             ProgressCore.getBarClasses(progressOptions),
-            indeterminate && 'w-1/3 animate-[arnis-progress_1.2s_ease_infinite]'
+            indeterminate && 'w-1/3 animate-[guru-progress_1.2s_ease_infinite]'
           )}
           style={indeterminate ? undefined : { width: `${percentage}%` }}
           {...(accessibilityProps as React.HTMLAttributes<HTMLDivElement>)}
         />
       </div>
-      <style>{`@keyframes arnis-progress { 0%{margin-left:-33%} 50%{margin-left:50%} 100%{margin-left:100%} }`}</style>
+      <style>{`@keyframes guru-progress { 0%{margin-left:-33%} 50%{margin-left:50%} 100%{margin-left:100%} }`}</style>
     </div>
   )
 }

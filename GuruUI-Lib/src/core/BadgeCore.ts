@@ -19,12 +19,12 @@ export class BadgeCore {
 
     // Variant classes
     const variantClasses = {
-      accent: 'bg-[color:var(--arnis-accent,#ffffff)] text-[color:var(--arnis-onAccent,#0b0b0b)]',
+      accent: 'bg-[color:var(--guru-accent,#ffffff)] text-[color:var(--guru-onAccent,#0b0b0b)]',
       success: 'bg-green-600 text-white',
       warning: 'bg-yellow-600 text-white',
       danger: 'bg-red-600 text-white',
-      outline: 'border border-[color:var(--arnis-accent,#ffffff)]/20 text-[color:var(--arnis-accent,#ffffff)]',
-      subtle: 'bg-[color:var(--arnis-body,#b3b3b3)]/10 text-[color:var(--arnis-body,#b3b3b3)]'
+      outline: 'border border-[color:var(--guru-accent,#ffffff)]/20 text-[color:var(--guru-accent,#ffffff)]',
+      subtle: 'bg-[color:var(--guru-body,#b3b3b3)]/10 text-[color:var(--guru-body,#b3b3b3)]'
     }
 
     // Rounded classes

@@ -41,10 +41,10 @@ export const Stats: React.FC<StatsProps> = ({
     <div className={cn('rounded-lg border border-white/10 bg-white/5 p-6', className)}>
       <div className="flex items-center justify-between">
         <div className="flex-1">
-          <p className="text-sm font-medium text-[color:var(--arnis-body,#b3b3b3)]">{title}</p>
-          <p className="mt-2 text-3xl font-bold text-[color:var(--arnis-heading,#ffffff)]">{value}</p>
+          <p className="text-sm font-medium text-[color:var(--guru-body,#b3b3b3)]">{title}</p>
+          <p className="mt-2 text-3xl font-bold text-[color:var(--guru-heading,#ffffff)]">{value}</p>
           {description && (
-            <p className="mt-1 text-sm text-[color:var(--arnis-body,#b3b3b3)]">{description}</p>
+            <p className="mt-1 text-sm text-[color:var(--guru-body,#b3b3b3)]">{description}</p>
           )}
           {trend && (
             <div className="mt-2 flex items-center gap-1">
@@ -53,7 +53,7 @@ export const Stats: React.FC<StatsProps> = ({
                 {trend.value > 0 ? '+' : ''}{trend.value}%
               </span>
               {trend.period && (
-                <span className="text-xs text-[color:var(--arnis-body,#b3b3b3)] ml-1">
+                <span className="text-xs text-[color:var(--guru-body,#b3b3b3)] ml-1">
                   {trend.period}
                 </span>
               )}
@@ -61,7 +61,7 @@ export const Stats: React.FC<StatsProps> = ({
           )}
         </div>
         {icon && (
-          <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[color:var(--arnis-accent,#ffffff)]/10">
+          <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[color:var(--guru-accent,#ffffff)]/10">
             {icon}
           </div>
         )}

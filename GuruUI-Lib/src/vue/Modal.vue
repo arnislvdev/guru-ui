@@ -13,7 +13,7 @@
         />
         <div ref="containerRef" :class="contentClasses">
           <div v-if="title" :class="headerClasses">
-            <h2 :id="titleId" class="text-lg font-semibold text-[color:var(--arnis-heading,#ffffff)]">
+            <h2 :id="titleId" class="text-lg font-semibold text-[color:var(--guru-heading,#ffffff)]">
               {{ title }}
             </h2>
             <button
@@ -31,7 +31,7 @@
           <div :class="footerClasses">
             <slot name="footer">
               <button
-                class="inline-flex items-center justify-center rounded-[var(--arnis-radius,0.5rem)] bg-[color:var(--arnis-accent,#ffffff)] px-4 py-2 text-sm font-medium text-[color:var(--arnis-on-accent,#0b0b0b)] hover:bg-[color:var(--arnis-accent-hover,#e5e5e5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--arnis-accent,#ffffff)]/60 focus-visible:ring-offset-2 ring-offset-[color:var(--arnis-background,#121212)]"
+                class="inline-flex items-center justify-center rounded-[var(--guru-radius,0.5rem)] bg-[color:var(--guru-accent,#ffffff)] px-4 py-2 text-sm font-medium text-[color:var(--guru-on-accent,#0b0b0b)] hover:bg-[color:var(--guru-accent-hover,#e5e5e5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--guru-accent,#ffffff)]/60 focus-visible:ring-offset-2 ring-offset-[color:var(--guru-background,#121212)]"
                 @click="handleClose"
               >
                 Close

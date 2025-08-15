@@ -1,4 +1,4 @@
-# ArnisUX
+# GuruUI
 
 A lightweight, multi-framework UI component library built with Tailwind CSS. Use the same components across React, Vue, and vanilla JavaScript with consistent styling and behavior.
 
@@ -17,15 +17,15 @@ A lightweight, multi-framework UI component library built with Tailwind CSS. Use
 ### Install the Package
 
 ```bash
-npm install arnis-ux
+npm install guru-ui
 ```
 
 ### Basic Usage
 
 #### React
 ```tsx
-import { Button, Modal, Alert } from 'arnis-ux'
-import 'arnis-ux/style.css'
+import { Button, Modal, Alert } from 'guru-ui'
+import 'guru-ui/style.css'
 
 function App() {
   return (
@@ -47,8 +47,8 @@ function App() {
 </template>
 
 <script setup>
-import { Button, Alert } from 'arnis-ux/vue'
-import 'arnis-ux/style.css'
+import { Button, Alert } from 'guru-ui/vue'
+import 'guru-ui/style.css'
 </script>
 ```
 
@@ -57,14 +57,14 @@ import 'arnis-ux/style.css'
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="node_modules/arnis-ux/style.css">
+  <link rel="stylesheet" href="node_modules/guru-ui/style.css">
 </head>
 <body>
-  <button data-arnis-button data-variant="primary">Click me</button>
-  <div data-arnis-alert data-variant="success">Success message!</div>
+  <button data-guru-button data-variant="primary">Click me</button>
+  <div data-guru-alert data-variant="success">Success message!</div>
   
   <script type="module">
-    import 'arnis-ux/vanilla'
+    import 'guru-ui/vanilla'
   </script>
 </body>
 </html>
@@ -74,7 +74,7 @@ import 'arnis-ux/style.css'
 
 ### Use Built-in Themes
 ```tsx
-import { ThemeProvider, themes } from 'arnis-ux'
+import { ThemeProvider, themes } from 'guru-ui'
 
 function App() {
   return (
@@ -88,10 +88,10 @@ function App() {
 ### Create Your Own Theme
 ```tsx
 const customTheme = {
-  '--arnis-primary': '#ff6b6b',
-  '--arnis-background': '#2d3436',
-  '--arnis-heading': '#ffffff',
-  '--arnis-body': '#b2bec3'
+  '--guru-primary': '#ff6b6b',
+  '--guru-background': '#2d3436',
+  '--guru-heading': '#ffffff',
+  '--guru-body': '#b2bec3'
 }
 
 <ThemeProvider theme={customTheme}>
@@ -138,21 +138,21 @@ const customTheme = {
 ### Import from Specific Frameworks
 ```tsx
 // React (default)
-import { Button } from 'arnis-ux'
+import { Button } from 'guru-ui'
 
 // Vue
-import { Button } from 'arnis-ux/vue'
+import { Button } from 'guru-ui/vue'
 
 // Vanilla JS
-import { createButton } from 'arnis-ux/vanilla'
+import { createButton } from 'guru-ui/vanilla'
 
 // Core logic only
-import { ButtonCore } from 'arnis-ux/core'
+import { ButtonCore } from 'guru-ui/core'
 ```
 
 ### Custom Styling
 ```tsx
-import { Button } from 'arnis-ux'
+import { Button } from 'guru-ui'
 
 // Override with your own classes
 <Button className="bg-red-500 hover:bg-red-600">
@@ -162,7 +162,7 @@ import { Button } from 'arnis-ux'
 
 ### Create Components Programmatically
 ```tsx
-import { createModal } from 'arnis-ux/vanilla'
+import { createModal } from 'guru-ui/vanilla'
 
 const modal = createModal({
   title: 'Custom Modal',
@@ -199,10 +199,10 @@ All components work well on mobile and desktop:
 ### Only Import What You Need
 ```tsx
 // Good - only imports Button code
-import { Button } from 'arnis-ux'
+import { Button } from 'guru-ui'
 
 // Bad - imports everything
-import * as Arnis from 'arnis-ux'
+import * as guru from 'guru-ui'
 ```
 
 ### Check Bundle Size
@@ -219,8 +219,8 @@ npm run analyze
 
 ### Set Up Locally
 ```bash
-git clone https://github.com/arnis-lv/arnis-ux.git
-cd arnis-ux
+git clone https://github.com/guru-lv/guru-ui.git
+cd guru-ui
 npm install
 npm run dev
 ```
@@ -275,9 +275,9 @@ MIT License - see LICENSE file for details.
 
 ## Support
 
-- **Documentation**: [docs.arnis-ux.com](https://docs.arnis-ux.com)
-- **Issues**: [GitHub Issues](https://github.com/arnis-lv/arnis-ux/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/arnis-lv/arnis-ux/discussions)
+- **Documentation**: [docs.guru-ui.com](https://docs.guru-ui.com)
+- **Issues**: [GitHub Issues](https://github.com/guru-lv/guru-ui/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/guru-lv/guru-ui/discussions)
 
 ## Version Updates
 
@@ -289,8 +289,8 @@ MIT License - see LICENSE file for details.
 
 ---
 
-**Made with care by the ArnisUX team**
+**Made with care by the GuruUI team**
 
-[![npm version](https://badge.fury.io/js/arnis-ux.svg)](https://badge.fury.io/js/arnis-ux)
+[![npm version](https://badge.fury.io/js/guru-ui.svg)](https://badge.fury.io/js/guru-ui)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)

@@ -20,7 +20,7 @@ export const Table = React.forwardRef<HTMLTableElement, TableProps<any>>(({ colu
   return (
     <div className={cn('overflow-auto rounded-lg border border-white/10', className)}>
       <table ref={ref} className="w-full text-left text-sm min-w-[600px] md:min-w-0" role="table">
-        <thead className={cn('bg-white/5 text-[color:var(--arnis-heading,#ffffff)]', stickyHeader && 'sticky top-0 z-10')}>
+        <thead className={cn('bg-white/5 text-[color:var(--guru-heading,#ffffff)]', stickyHeader && 'sticky top-0 z-10')}>
           <tr>
             {columns.map((c, idx) => (
               <th key={idx} style={{ width: c.width }} className="px-4 py-2 font-medium" scope="col">
@@ -29,7 +29,7 @@ export const Table = React.forwardRef<HTMLTableElement, TableProps<any>>(({ colu
             ))}
           </tr>
         </thead>
-        <tbody className="divide-y divide-white/10 text-[color:var(--arnis-body,#b3b3b3)]">
+        <tbody className="divide-y divide-white/10 text-[color:var(--guru-body,#b3b3b3)]">
           {data.length === 0 && (
             <tr>
               <td colSpan={columns.length} className="px-4 py-6 text-center" role="cell">{empty}</td>

@@ -10,13 +10,13 @@ export type HeroProps = {
 
 export const Hero: React.FC<HeroProps> = ({ title, subtitle, cta, center = true, className }) => {
   return (
-    <section className={`w-full bg-[color:var(--arnis-background,#121212)] text-[color:var(--arnis-body,#b3b3b3)] ${className ?? ''}`.trim()}>
+    <section className={`w-full bg-[color:var(--guru-background,#121212)] text-[color:var(--guru-body,#b3b3b3)] ${className ?? ''}`.trim()}>
       <div className={center ? 'mx-auto max-w-5xl px-6 py-24 text-center' : 'mx-auto max-w-5xl px-6 py-24'}>
-        <h1 className="text-4xl font-extrabold tracking-tight text-[color:var(--arnis-heading,#ffffff)] sm:text-5xl md:text-6xl">
+        <h1 className="text-4xl font-extrabold tracking-tight text-[color:var(--guru-heading,#ffffff)] sm:text-5xl md:text-6xl">
           {title}
         </h1>
         {subtitle ? (
-          <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-[color:var(--arnis-body,#b3b3b3)]">
+          <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-[color:var(--guru-body,#b3b3b3)]">
             {subtitle}
           </p>
         ) : null}

@@ -70,12 +70,12 @@ export class AlertCore {
   }
 
   static getDescriptionClasses(): string {
-    return 'text-[color:var(--arnis-body,#b3b3b3)]'
+    return 'text-[color:var(--guru-body,#b3b3b3)]'
   }
 
   static getDismissButtonClasses(options: AlertCoreOptions): string {
     const baseClasses = [
-      'flex-shrink-0 p-1 rounded-md hover:bg-[color:var(--arnis-body,#b3b3b3)]/10 transition-colors'
+      'flex-shrink-0 p-1 rounded-md hover:bg-[color:var(--guru-body,#b3b3b3)]/10 transition-colors'
     ]
 
     const variantClasses = {

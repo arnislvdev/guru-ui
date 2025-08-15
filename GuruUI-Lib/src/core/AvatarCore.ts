@@ -9,7 +9,7 @@ export interface AvatarCoreOptions {
 export class AvatarCore {
   static getClasses(options: AvatarCoreOptions): string {
     const baseClasses = [
-      'relative inline-block bg-[color:var(--arnis-body,#b3b3b3)]/10 text-[color:var(--arnis-heading,#ffffff)] font-medium'
+      'relative inline-block bg-[color:var(--guru-body,#b3b3b3)]/10 text-[color:var(--guru-heading,#ffffff)] font-medium'
     ]
 
     // Size classes
@@ -41,10 +41,10 @@ export class AvatarCore {
   }
 
   static getRingClasses(ringColor?: string): string {
-    const baseRingClasses = 'ring-2 ring-offset-2 ring-offset-[color:var(--arnis-background,#121212)]'
+    const baseRingClasses = 'ring-2 ring-offset-2 ring-offset-[color:var(--guru-background,#121212)]'
 
     const colorClasses = {
-      accent: 'ring-[color:var(--arnis-accent,#ffffff)]',
+      accent: 'ring-[color:var(--guru-accent,#ffffff)]',
       success: 'ring-green-500',
       warning: 'ring-yellow-500',
       danger: 'ring-red-500'
@@ -92,7 +92,7 @@ export class AvatarCore {
 
   static getStatusClasses(options: AvatarCoreOptions): string {
     const baseClasses = [
-      'absolute bottom-0 right-0 block rounded-full ring-2 ring-[color:var(--arnis-background,#121212)]'
+      'absolute bottom-0 right-0 block rounded-full ring-2 ring-[color:var(--guru-background,#121212)]'
     ]
 
     const sizeClasses = {

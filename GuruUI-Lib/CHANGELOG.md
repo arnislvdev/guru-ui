@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to ArnisUX are documented in this file.
+All notable changes to GuruUI are documented in this file.
 
 ## [0.1.20] - 2024-12-19
 

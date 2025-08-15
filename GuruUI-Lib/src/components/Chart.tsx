@@ -42,14 +42,14 @@ export const Chart: React.FC<ChartProps> = ({
                   y={y}
                   width={barWidth}
                   height={barHeight}
-                  fill={item.color || 'var(--arnis-accent, #ffffff)'}
+                  fill={item.color || 'var(--guru-accent, #ffffff)'}
                   className="transition-all duration-300 hover:opacity-80"
                 />
                 <text
                   x={x + barWidth / 2}
                   y={height - 5}
                   textAnchor="middle"
-                  className="text-xs fill-current text-[color:var(--arnis-body,#b3b3b3)]"
+                  className="text-xs fill-current text-[color:var(--guru-body,#b3b3b3)]"
                 >
                   {item.label}
                 </text>
@@ -57,7 +57,7 @@ export const Chart: React.FC<ChartProps> = ({
                   x={x + barWidth / 2}
                   y={y - 5}
                   textAnchor="middle"
-                  className="text-xs fill-current text-[color:var(--arnis-heading,#ffffff)]"
+                  className="text-xs fill-current text-[color:var(--guru-heading,#ffffff)]"
                 >
                   {item.value}
                 </text>
@@ -81,7 +81,7 @@ export const Chart: React.FC<ChartProps> = ({
         <g>
           <polyline
             fill="none"
-            stroke="var(--arnis-accent, #ffffff)"
+            stroke="var(--guru-accent, #ffffff)"
             strokeWidth="2"
             points={points}
             className="transition-all duration-300"
@@ -96,14 +96,14 @@ export const Chart: React.FC<ChartProps> = ({
                   cx={x}
                   cy={y}
                   r="4"
-                  fill={item.color || 'var(--arnis-accent, #ffffff)'}
+                  fill={item.color || 'var(--guru-accent, #ffffff)'}
                   className="transition-all duration-300 hover:r-6"
                 />
                 <text
                   x={x}
                   y={y - 10}
                   textAnchor="middle"
-                  className="text-xs fill-current text-[color:var(--arnis-heading,#ffffff)]"
+                  className="text-xs fill-current text-[color:var(--guru-heading,#ffffff)]"
                 >
                   {item.value}
                 </text>
@@ -111,7 +111,7 @@ export const Chart: React.FC<ChartProps> = ({
                   x={x}
                   y={height - 5}
                   textAnchor="middle"
-                  className="text-xs fill-current text-[color:var(--arnis-body,#b3b3b3)]"
+                  className="text-xs fill-current text-[color:var(--guru-body,#b3b3b3)]"
                 >
                   {item.label}
                 </text>
@@ -173,7 +173,7 @@ export const Chart: React.FC<ChartProps> = ({
                   y={labelY}
                   textAnchor="middle"
                   dominantBaseline="middle"
-                  className="text-xs fill-current text-[color:var(--arnis-heading,#ffffff)] font-medium"
+                  className="text-xs fill-current text-[color:var(--guru-heading,#ffffff)] font-medium"
                 >
                   {Math.round((item.value / totalValue) * 100)}%
                 </text>
@@ -194,7 +194,7 @@ export const Chart: React.FC<ChartProps> = ({
                 <text
                   x="18"
                   y="9"
-                  className="text-xs fill-current text-[color:var(--arnis-body,#b3b3b3)]"
+                  className="text-xs fill-current text-[color:var(--guru-body,#b3b3b3)]"
                 >
                   {item.label}
                 </text>

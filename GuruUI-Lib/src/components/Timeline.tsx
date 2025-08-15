@@ -32,7 +32,7 @@ export const Timeline: React.FC<TimelineProps> = ({
       case 'error':
         return 'text-red-500 border-red-500'
       default:
-        return 'text-[color:var(--arnis-accent,#ffffff)] border-[color:var(--arnis-accent,#ffffff)]'
+        return 'text-[color:var(--guru-accent,#ffffff)] border-[color:var(--guru-accent,#ffffff)]'
     }
   }
 
@@ -51,16 +51,16 @@ export const Timeline: React.FC<TimelineProps> = ({
                   {item.icon || <Circle className="h-4 w-4" />}
                 </div>
                 <div className="mt-2 text-center max-w-24">
-                  <p className="text-sm font-medium text-[color:var(--arnis-heading,#ffffff)] truncate">
+                  <p className="text-sm font-medium text-[color:var(--guru-heading,#ffffff)] truncate">
                     {item.title}
                   </p>
                   {item.description && (
-                    <p className="text-xs text-[color:var(--arnis-body,#b3b3b3)] truncate">
+                    <p className="text-xs text-[color:var(--guru-body,#b3b3b3)] truncate">
                       {item.description}
                     </p>
                   )}
                   {item.date && (
-                    <p className="text-xs text-[color:var(--arnis-body,#b3b3b3)] mt-1">
+                    <p className="text-xs text-[color:var(--guru-body,#b3b3b3)] mt-1">
                       {item.date}
                     </p>
                   )}
@@ -95,18 +95,18 @@ export const Timeline: React.FC<TimelineProps> = ({
             
             <div className="flex-1 min-w-0 pb-6">
               <div className="flex items-center gap-2 mb-1">
-                <h3 className="text-sm font-medium text-[color:var(--arnis-heading,#ffffff)]">
+                <h3 className="text-sm font-medium text-[color:var(--guru-heading,#ffffff)]">
                   {item.title}
                 </h3>
                 {item.date && (
-                  <span className="text-xs text-[color:var(--arnis-body,#b3b3b3)]">
+                  <span className="text-xs text-[color:var(--guru-body,#b3b3b3)]">
                     {item.date}
                   </span>
                 )}
               </div>
               
               {item.description && (
-                <p className="text-sm text-[color:var(--arnis-body,#b3b3b3)]">
+                <p className="text-sm text-[color:var(--guru-body,#b3b3b3)]">
                   {item.description}
                 </p>
               )}

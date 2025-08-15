@@ -33,8 +33,8 @@ export const Upload: React.FC<UploadProps> = ({ onFiles, accept, multiple = true
       onClick={() => inputRef.current?.click()}
       className={cn('cursor-pointer rounded-lg border border-dashed border-white/15 bg-white/5 px-6 py-10 text-center hover:bg-white/10', dragOver && 'bg-white/10', className)}
     >
-      <div className="text-[color:var(--arnis-heading,#ffffff)]">{label}</div>
-      <div className="mt-1 text-sm text-[color:var(--arnis-body,#b3b3b3)]">{accept ? `Accepted: ${accept}` : 'Any file'}</div>
+      <div className="text-[color:var(--guru-heading,#ffffff)]">{label}</div>
+      <div className="mt-1 text-sm text-[color:var(--guru-body,#b3b3b3)]">{accept ? `Accepted: ${accept}` : 'Any file'}</div>
       <input ref={inputRef} type="file" accept={accept} multiple={multiple} className="hidden" onChange={onChange} />
     </div>
   )

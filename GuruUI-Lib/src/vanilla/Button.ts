@@ -9,7 +9,7 @@ export interface ButtonOptions extends ButtonCoreOptions {
   onBlur?: (event: FocusEvent) => void
 }
 
-export class ArnisButton {
+export class GuruButton {
   private element: HTMLButtonElement
   private options: ButtonOptions
 
@@ -128,14 +128,14 @@ export class ArnisButton {
 }
 
 // Factory function for easier usage
-export function createButton(options: ButtonOptions): ArnisButton {
-  return new ArnisButton(options)
+export function createButton(options: ButtonOptions): GuruButton {
+  return new GuruButton(options)
 }
 
 // Auto-initialize buttons with data attributes
 export function initializeButtons(): void {
   document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('[data-arnis-button]')
+    const buttons = document.querySelectorAll('[data-guru-button]')
     
     buttons.forEach(buttonElement => {
       const button = buttonElement as HTMLElement
@@ -148,12 +148,12 @@ export function initializeButtons(): void {
         rounded: button.hasAttribute('data-rounded'),
         onClick: (e) => {
           // Trigger custom event
-          button.dispatchEvent(new CustomEvent('arnis-button-click', { detail: e }))
+          button.dispatchEvent(new CustomEvent('guru-button-click', { detail: e }))
         }
       }
 
-      const arnisButton = new ArnisButton(options)
-      arnisButton.mount(button)
+      const guruButton = new GuruButton(options)
+      guruButton.mount(button)
     })
   })
 }

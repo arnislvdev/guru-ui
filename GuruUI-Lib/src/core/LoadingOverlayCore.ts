@@ -77,9 +77,9 @@ export class LoadingOverlayCore {
     }
 
     const colorClasses = {
-      primary: 'text-[color:var(--arnis-primary,#3b82f6)]',
-      secondary: 'text-[color:var(--arnis-secondary,#64748b)]',
-      accent: 'text-[color:var(--arnis-accent,#ffffff)]',
+      primary: 'text-[color:var(--guru-primary,#3b82f6)]',
+      secondary: 'text-[color:var(--guru-secondary,#64748b)]',
+      accent: 'text-[color:var(--guru-accent,#ffffff)]',
       white: 'text-white'
     }
 
@@ -121,9 +121,9 @@ export class LoadingOverlayCore {
     }
 
     const colorClasses = {
-      primary: 'text-[color:var(--arnis-primary,#3b82f6)]',
-      secondary: 'text-[color:var(--arnis-secondary,#64748b)]',
-      accent: 'text-[color:var(--arnis-accent,#ffffff)]',
+      primary: 'text-[color:var(--guru-primary,#3b82f6)]',
+      secondary: 'text-[color:var(--guru-secondary,#64748b)]',
+      accent: 'text-[color:var(--guru-accent,#ffffff)]',
       white: 'text-white'
     }
 
@@ -165,9 +165,9 @@ export class LoadingOverlayCore {
     }
 
     const colorClasses = {
-      primary: 'text-[color:var(--arnis-primary,#3b82f6)]',
-      secondary: 'text-[color:var(--arnis-secondary,#64748b)]',
-      accent: 'text-[color:var(--arnis-accent,#ffffff)]',
+      primary: 'text-[color:var(--guru-primary,#3b82f6)]',
+      secondary: 'text-[color:var(--guru-secondary,#64748b)]',
+      accent: 'text-[color:var(--guru-accent,#ffffff)]',
       white: 'text-white'
     }
 
@@ -191,9 +191,9 @@ export class LoadingOverlayCore {
     }
 
     const colorClasses = {
-      primary: 'text-[color:var(--arnis-primary,#3b82f6)]',
-      secondary: 'text-[color:var(--arnis-secondary,#64748b)]',
-      accent: 'text-[color:var(--arnis-accent,#ffffff)]',
+      primary: 'text-[color:var(--guru-primary,#3b82f6)]',
+      secondary: 'text-[color:var(--guru-secondary,#64748b)]',
+      accent: 'text-[color:var(--guru-accent,#ffffff)]',
       white: 'text-white'
     }
 
@@ -217,9 +217,9 @@ export class LoadingOverlayCore {
     }
 
     const colorClasses = {
-      primary: 'text-[color:var(--arnis-primary,#3b82f6)]',
-      secondary: 'text-[color:var(--arnis-secondary,#64748b)]',
-      accent: 'text-[color:var(--arnis-accent,#ffffff)]',
+      primary: 'text-[color:var(--guru-primary,#3b82f6)]',
+      secondary: 'text-[color:var(--guru-secondary,#64748b)]',
+      accent: 'text-[color:var(--guru-accent,#ffffff)]',
       white: 'text-white'
     }
 

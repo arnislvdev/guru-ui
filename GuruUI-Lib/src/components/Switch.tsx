@@ -19,8 +19,8 @@ export const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
         <Toggle ref={ref} pressed={checked || false} onPressedChange={onCheckedChange || (() => {})} disabled={disabled || false} size={size} className={className} />
         {(label || description) && (
           <span className="leading-snug">
-            {label && <span className="block text-[color:var(--arnis-heading,#ffffff)]">{label}</span>}
-            {description && <span className="block text-sm text-[color:var(--arnis-body,#b3b3b3)]">{description}</span>}
+            {label && <span className="block text-[color:var(--guru-heading,#ffffff)]">{label}</span>}
+            {description && <span className="block text-sm text-[color:var(--guru-body,#b3b3b3)]">{description}</span>}
           </span>
         )}
       </label>

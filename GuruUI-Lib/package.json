@@ -1,16 +1,16 @@
 {
-  "name": "arnis-ux",
+  "name": "guru-ui",
   "version": "0.1.21",
   "description": "A lightweight, multi-framework UI component library with React, Vue, and vanilla JavaScript support",
   "license": "MIT",
-  "author": "ArnisUX",
-  "homepage": "https://www.npmjs.com/package/arnis-ux",
+  "author": "GuruUI",
+  "homepage": "https://www.npmjs.com/package/guru-ui",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arnis-lv/arnis-ux.git"
+    "url": "git+https://github.com/guru-lv/guru-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/arnis-lv/arnis-ux/issues"
+    "url": "https://github.com/guru-lv/guru-ui/issues"
   },
   "type": "module",
   "sideEffects": [

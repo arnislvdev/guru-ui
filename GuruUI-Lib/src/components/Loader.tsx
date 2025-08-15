@@ -14,12 +14,12 @@ export const Loader: React.FC<LoaderProps> = ({ size = 'md', label, className = 
       <span
         aria-hidden="true"
         className={cn(
-          'inline-block rounded-full border-white/20 border-t-[color:var(--arnis-accent,#ffffff)] animate-spin',
+          'inline-block rounded-full border-white/20 border-t-[color:var(--guru-accent,#ffffff)] animate-spin',
           dims
         )}
         style={{ borderRightColor: 'transparent', borderBottomColor: 'transparent' } as React.CSSProperties}
       />
-      {label && <span className="text-[color:var(--arnis-body,#b3b3b3)]">{label}</span>}
+      {label && <span className="text-[color:var(--guru-body,#b3b3b3)]">{label}</span>}
     </div>
   )
 }

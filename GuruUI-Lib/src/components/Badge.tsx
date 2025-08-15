@@ -22,11 +22,11 @@ export const Badge: React.FC<BadgeProps> = ({
   }
   const variants: Record<Variant, string> = {
     accent:
-      'bg-[color:var(--arnis-accent,#1e90ff)] text-white hover:opacity-95',
+      'bg-[color:var(--guru-accent,#1e90ff)] text-white hover:opacity-95',
     outline:
-      'border border-[color:var(--arnis-accent,#1e90ff)] text-[color:var(--arnis-accent,#1e90ff)]',
+      'border border-[color:var(--guru-accent,#1e90ff)] text-[color:var(--guru-accent,#1e90ff)]',
     subtle:
-      'bg-[color:var(--arnis-accent,#1e90ff)]/10 text-[color:var(--arnis-accent,#1e90ff)]',
+      'bg-[color:var(--guru-accent,#1e90ff)]/10 text-[color:var(--guru-accent,#1e90ff)]',
     success: 'bg-[#10b981] text-white',
     warning: 'bg-[#f59e0b] text-[#0b0b0b]',
     danger: 'bg-[#ef4444] text-white'

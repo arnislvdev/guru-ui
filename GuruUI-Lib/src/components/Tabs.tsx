@@ -61,7 +61,7 @@ export const Tabs: React.FC<TabsProps> = ({ tabs, value, defaultValue, onValueCh
               tabIndex={selected ? 0 : -1}
               className={`-mb-px rounded-t-md px-4 py-2 text-sm ${
                 selected
-                  ? 'border-b-2 border-[color:var(--arnis-accent,#1e90ff)] text-[color:var(--arnis-heading,#ffffff)]'
+                  ? 'border-b-2 border-[color:var(--guru-accent,#1e90ff)] text-[color:var(--guru-heading,#ffffff)]'
                   : 'text-white/60 hover:text-white'
               }`}
               onClick={() => setActive(t.value)}

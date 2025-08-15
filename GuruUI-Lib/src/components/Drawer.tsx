@@ -44,7 +44,7 @@ export const Drawer: React.FC<DrawerProps> = ({ open: openProp, onOpenChange, si
   return open ? (
     <div className="fixed inset-0 z-50">
       <div className="absolute inset-0 bg-black/50" onClick={close} />
-      <div className={cn('absolute transform bg-[color:var(--arnis-background,#121212)] border border-white/10 shadow-2xl transition-transform duration-200', pos, posOpen, className)}>
+      <div className={cn('absolute transform bg-[color:var(--guru-background,#121212)] border border-white/10 shadow-2xl transition-transform duration-200', pos, posOpen, className)}>
         {children}
       </div>
     </div>

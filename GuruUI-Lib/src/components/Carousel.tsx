@@ -73,7 +73,7 @@ export const Carousel: React.FC<CarouselProps> = ({
       {showIndicators && count > 1 && (
         <div className="absolute bottom-2 left-0 right-0 flex items-center justify-center gap-2">
           {slides.map((_, i) => (
-            <button key={i} aria-label={`Go to slide ${i + 1}`} onClick={() => go(i)} className={cn('h-2 w-2 rounded-full', i === index ? 'bg-[color:var(--arnis-accent,#ffffff)]' : 'bg-white/40')} />
+            <button key={i} aria-label={`Go to slide ${i + 1}`} onClick={() => go(i)} className={cn('h-2 w-2 rounded-full', i === index ? 'bg-[color:var(--guru-accent,#ffffff)]' : 'bg-white/40')} />
           ))}
         </div>
       )}

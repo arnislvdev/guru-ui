@@ -23,7 +23,7 @@ export default defineConfig({
         vanilla: fileURLToPath(new URL('./src/vanilla/index.ts', import.meta.url)),
         core: fileURLToPath(new URL('./src/core/index.ts', import.meta.url))
       },
-      name: 'arnis-ux',
+      name: 'guru-ui',
       formats: ['es'],
       fileName: (format, entryName) => {
         return entryName === 'index' ? 'index.js' : `${entryName}.js`

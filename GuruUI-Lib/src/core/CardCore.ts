@@ -9,7 +9,7 @@ export interface CardCoreOptions {
 export class CardCore {
   static getClasses(options: CardCoreOptions): string {
     const baseClasses = [
-      'bg-[color:var(--arnis-background,#121212)] border border-[color:var(--arnis-body,#b3b3b3)]/10'
+      'bg-[color:var(--guru-background,#121212)] border border-[color:var(--guru-body,#b3b3b3)]/10'
     ]
 
     // Padding classes
@@ -29,7 +29,7 @@ export class CardCore {
     }
 
     // Border classes
-    const borderClasses = options.border ? 'border-[color:var(--arnis-body,#b3b3b3)]/20' : 'border-[color:var(--arnis-body,#b3b3b3)]/10'
+    const borderClasses = options.border ? 'border-[color:var(--guru-body,#b3b3b3)]/20' : 'border-[color:var(--guru-body,#b3b3b3)]/10'
 
     // Rounded classes
     const roundedClasses = {
@@ -41,7 +41,7 @@ export class CardCore {
     }
 
     // Hover classes
-    const hoverClasses = options.hover ? 'hover:border-[color:var(--arnis-accent,#ffffff)]/30 hover:shadow-lg transition-all duration-200' : ''
+    const hoverClasses = options.hover ? 'hover:border-[color:var(--guru-accent,#ffffff)]/30 hover:shadow-lg transition-all duration-200' : ''
 
     return [
       ...baseClasses,

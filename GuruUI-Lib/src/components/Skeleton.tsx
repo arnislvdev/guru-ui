@@ -10,7 +10,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({ className = '', rounded = tr
     <div
       className={cn(
         'animate-pulse bg-white/10',
-        rounded ? 'rounded-[var(--arnis-radius,0.5rem)]' : '',
+        rounded ? 'rounded-[var(--guru-radius,0.5rem)]' : '',
         className
       )}
       {...props}

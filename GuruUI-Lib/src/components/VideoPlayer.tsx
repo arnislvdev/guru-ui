@@ -150,7 +150,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
               onChange={handleSeek}
               className="w-full h-1 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
               style={{
-                background: `linear-gradient(to right, var(--arnis-accent, #ffffff) 0%, var(--arnis-accent, #ffffff) ${(currentTime / duration) * 100}%, rgba(255,255,255,0.2) ${(currentTime / duration) * 100}%, rgba(255,255,255,0.2) 100%)`
+                background: `linear-gradient(to right, var(--guru-accent, #ffffff) 0%, var(--guru-accent, #ffffff) ${(currentTime / duration) * 100}%, rgba(255,255,255,0.2) ${(currentTime / duration) * 100}%, rgba(255,255,255,0.2) 100%)`
               }}
             />
           </div>
@@ -202,7 +202,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
                   onChange={handleVolumeChange}
                   className="w-16 h-1 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
                   style={{
-                    background: `linear-gradient(to right, var(--arnis-accent, #ffffff) 0%, var(--arnis-accent, #ffffff) ${volume * 100}%, rgba(255,255,255,0.2) ${volume * 100}%, rgba(255,255,255,0.2) 100%)`
+                    background: `linear-gradient(to right, var(--guru-accent, #ffffff) 0%, var(--guru-accent, #ffffff) ${volume * 100}%, rgba(255,255,255,0.2) ${volume * 100}%, rgba(255,255,255,0.2) 100%)`
                   }}
                 />
               </div>
@@ -224,7 +224,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
           height: 12px;
           width: 12px;
           border-radius: 50%;
-          background: var(--arnis-accent, #ffffff);
+          background: var(--guru-accent, #ffffff);
           cursor: pointer;
         }
         
@@ -232,7 +232,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
           height: 12px;
           width: 12px;
           border-radius: 50%;
-          background: var(--arnis-accent, #ffffff);
+          background: var(--guru-accent, #ffffff);
           cursor: pointer;
           border: none;
         }
